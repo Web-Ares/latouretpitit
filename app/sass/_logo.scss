@@ -1,0 +1,16 @@
+.logo {
+  position: absolute;
+  z-index: 1;
+  top: 17px;
+
+  img {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .logo {
+    top: 17px;
+  }
+}
