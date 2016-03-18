@@ -1,0 +1,51 @@
+/* --------------- language --------------- */
+.language{
+  font-size: 14px;
+  line-height: 14px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  left: 200px;
+  top: 23px;
+  width: 124px;
+  color: #000;
+
+  &:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -2px 0 0 0;
+    border: 5px solid transparent;
+    border-top: 6px solid #bbbbbb;
+  }
+
+  a{
+    display: block;
+    vertical-align: top;
+    color: #103d6a;
+    width: 69px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color .3s ease;
+    //padding: 4px 13px 2px 33px;
+
+    &:hover{
+      color: #29b6f6;
+    }
+  }
+  &__active a:hover {
+    color: #103d6a;
+  }
+  &__dropdown {
+    display: none;
+    position: relative;
+    top: 5px;
+
+    a {
+      margin-bottom: 3px;
+    }
+  }
+}
+/* --------------- /language --------------- */

@@ -17,8 +17,32 @@
     <!-- site -->
     <div class="site">
 
+        <!--search-->
+        <form class="search" action="#">
+
+            <label for="search-field">Chercher un bien:</label>
+            <input id="search-field" type="search">
+            <button type="submit">Recherche</button>
+
+        </form>
+        <!--/search-->
+
         <!-- site__header -->
         <header class="site__header">
+
+            <!--site__header-inner-->
+            <div class="site__header-inner">
+
+                <!--site__header-contacts-->
+                <a href="#" class="site__header-contacts">Contactez-nous</a>
+                <!--/site__header-contacts-->
+
+                <!--site__header-search-btn-->
+                <button class="site__header-search-btn"></button>
+                <!--/site__header-search-btn-->
+
+            </div>
+            <!--/site__header-inner-->
 
             <!-- site__header-layout -->
             <div class="site__header-layout">
@@ -29,6 +53,22 @@
                 </h1>
                 <!-- /logo -->
 
+                <!--language-->
+                <div class="language">
+
+                    <div class="language__active">
+                        <a href="#" class="language__item">Français</a>
+                    </div>
+
+                    <div class="language__dropdown">
+                        <a href="#" class="language__item">English</a>
+                        <a href="#" class="language__item">Deutch</a>
+                        <a href="#" class="language__item">Niderlands</a>
+                    </div>
+
+                </div>
+                <!--/languages-->
+
                 <!-- site__menu-btn -->
                 <button class="site__menu-btn">
                     <span></span>
@@ -37,6 +77,24 @@
 
                 <!-- site__menu -->
                 <div class="site__menu">
+
+                    <!--site__menu-top-->
+                    <ul class="site__menu-top">
+                        <li><a href="#">Evaluation</a></li>
+                        <li><a href="#">Investissement</a></li>
+                        <li><a href="#">Gestion locative</a></li>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                    </ul>
+                    <!--/site__menu-top-->
+
+                    <!--site__menu-bottom-->
+                    <ul class="site__menu-bottom">
+                        <li><a href="#">Location</a></li>
+                        <li><a href="#">Vente</a></li>
+                        <li><a href="#">Projet neuf</a></li>
+                        <li><a href="#">Résidence Service</a></li>
+                    </ul>
+                    <!--/site__menu-bottom-->
 
                 </div>
                 <!-- /site__menu -->
@@ -49,7 +107,6 @@
 
         <!-- site__content -->
         <div class="site__content">
-
 
 
         </div>
@@ -89,7 +146,6 @@
 
     </div>
     <!-- /popup -->
-
 
     <script src="js/vendors/jquery-2.2.1.min.js"></script>
     <script src="js/index.min.js"></script>

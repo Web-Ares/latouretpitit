@@ -1,16 +1,18 @@
 .logo {
   position: absolute;
   z-index: 1;
-  top: 17px;
+  top: 41px;
+  left: 14px;
 
   img {
-    width: 100%;
+    //width: 100%;
   }
 
 }
 
 @media (min-width: $tablet-landscape) {
   .logo {
-    top: 17px;
+    top: 41px;
+    left: 14px;
   }
 }
