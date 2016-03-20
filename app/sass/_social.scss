@@ -1,0 +1,26 @@
+.social-networks {
+
+  a{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-image: url("../img/social.png");
+    text-indent: -9999px;
+    width: 20px;
+    height: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__facebook {
+    background-size: 69px 100%;
+  }
+
+  &__linkedin {
+    background-size: 69px 100%;
+    background-position: right;
+  }
+}
