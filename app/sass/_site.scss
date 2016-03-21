@@ -6,14 +6,6 @@
   min-height: 100%;
   @include main-font1();
 
-  &_index{
-    padding-bottom: 184px;
-
-    .site__footer {
-      bottom: 184px;
-    }
-  }
-
   &:after {
     display: block;
     width: 100%;
@@ -337,6 +329,14 @@
 }
 @media (min-width: $tablet-landscape) {
   .site {
+
+    &_index{
+      padding-bottom: 184px;
+
+      .site__footer {
+        bottom: 184px;
+      }
+    }
 
     &__footer-menu {
 
