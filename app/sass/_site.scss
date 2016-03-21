@@ -295,6 +295,15 @@
     margin: 0 auto;
   }
 
+  &__title {
+    margin: 0 0 20px;
+    color: $site-title-color;
+    font-size: 28px;
+    line-height: 31px;
+    @include main-font2();
+    font-weight: normal;
+  }
+
 }
 .site_search {
   transform: translateY(66px);
@@ -581,6 +590,12 @@
       &-btn {
         display: none;
       }
+    }
+
+    &__title {
+      margin: 0 0 20px;
+      font-size: 48px;
+      line-height: 51px;
     }
   }
 }

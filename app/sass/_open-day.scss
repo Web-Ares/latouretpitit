@@ -1,0 +1,30 @@
+.open-day {
+  background: url("../img/open-day-bg.jpg") no-repeat right center #252526;
+
+  &__time {
+    display: block;
+    color: #cacaca;
+    font-size: 24px;
+    line-height: 27px;
+    @include main-font4();
+  }
+
+  &__project-name {
+    display: block;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #fff;
+    @include main-font2();
+
+    span {
+      color: #edc484;
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .open-day {
+
+  }
+}
