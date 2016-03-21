@@ -1,38 +1,41 @@
 .btn {
-  border: none;
+  position: relative;
   height: 50px;
-  padding: 0 10px;
-  color: $btn-color;
   display: flex;
   text-align: left;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  padding: 0 10px;
   background: $btn-back;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $btn-color;
+  letter-spacing: 1px;
+  @include main-font3();
+  @include transition(background, .3, 0);
 
   &:hover {
     background: $btn-back-hover;
   }
 
   &:active {
-    color: $btn-color-active;
-    background: $btn-back-active;
+    color: $btn-color;
+    background: $btn-back-hover;
   }
+  &_search {
+    padding: 0 33px 0 58px;
 
-  &_2 {
-    width: 150px;
-    height: 40px;
-    background: $btn-2-back;
-
-    &:hover {
-      background: $btn-2-back-hover;
-    }
-
-    &:active {
-      color: $btn-2-color-active;
-      background: $btn-2-back-active;
+    &:after {
+      width: 15px;
+      height: 16px;
+      left: 27px;
+      @include absoluteCenterY();
+      background: url(../img/search-icon_2.png) no-repeat;
+      background-size: contain;
+      content: '';
     }
   }
-
 }

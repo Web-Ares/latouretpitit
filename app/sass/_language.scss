@@ -1,43 +1,42 @@
 /* --------------- language --------------- */
 .language{
+  position: absolute;
+  z-index: 1;
+  left: 142px;
+  top: 13px;
+  padding: 0 10px 0 23px;
+  color: #000;
   font-size: 14px;
   line-height: 14px;
   height: 20px;
   cursor: pointer;
-  position: absolute;
-  z-index: 1;
-  left: 200px;
-  top: 23px;
-  width: 124px;
-  color: #000;
 
   &:after{
-    content: '';
     position: absolute;
-    right: 0;
-    top: 50%;
-    margin: -2px 0 0 0;
-    border: 5px solid transparent;
-    border-top: 6px solid #bbbbbb;
+    top: 6px;
+    left: 0;
+    width: 8px;
+    height: 5px;
+    background: url(../img/language-arrow.png) no-repeat;
+    background-size: contain;
+    content: '';
   }
 
   a{
-    display: block;
-    vertical-align: top;
-    color: #103d6a;
-    width: 69px;
     overflow: hidden;
+    vertical-align: top;
+    display: block;
+    color: #1d1d1d;
     text-overflow: ellipsis;
+    padding: 2px 0;
+    font-size: 16px;
     transition: color .3s ease;
-    //padding: 4px 13px 2px 33px;
 
     &:hover{
-      color: #29b6f6;
+      color: #4a4949;
     }
   }
-  &__active a:hover {
-    color: #103d6a;
-  }
+
   &__dropdown {
     display: none;
     position: relative;
@@ -49,3 +48,36 @@
   }
 }
 /* --------------- /language --------------- */
+
+@media (min-width: $tablet-portrait) {
+
+  /* --------------- language --------------- */
+  .language{
+    left: 165px;
+    top: 17px;
+  }
+  /* --------------- /language --------------- */
+
+}
+@media (min-width: $tablet-landscape) {
+
+  /* --------------- language --------------- */
+  .language{
+    left: 170px;
+    top: 16px;
+  }
+  /* --------------- /language --------------- */
+
+}
+@media (min-width: $desktop) {
+
+  /* --------------- language --------------- */
+  .language{
+    left: 207px;
+    top: 62px;
+  }
+  /* --------------- /language --------------- */
+
+}
+
+

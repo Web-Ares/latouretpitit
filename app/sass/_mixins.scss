@@ -25,6 +25,7 @@
   font-style: normal;
 }
 
+//justify
 @mixin justify() {
   text-align: justify;
 
@@ -35,6 +36,7 @@
   }
 }
 
+//absoluteCenter
 @mixin absoluteCenter() {
   position: absolute;
   top: 50%;
@@ -50,6 +52,34 @@
   position: absolute;
   top: 50%;
   transform: translateY( -50% );
+}
+
+//transform
+@mixin transform-translate( $posX, $posY ) {
+  -webkit-transform: translate( $posX, $posY );
+  transform: translate( $posX, $posY );
+}
+@mixin transform-rotate( $deg ) {
+  -webkit-transform: rotate( $deg + deg );
+  transform: rotate( $deg + deg );
+}
+@mixin transform-scale( $num ) {
+  -webkit-transform: rotate( $num );
+  transform: rotate( $num );
+}
+
+//transition
+@mixin transition( $property, $duration, $delay ) {
+  -webkit-transition: $property $duration+s linear $delay+s;
+  transition: $property $duration+s linear $delay+s;
+}
+@mixin transition-opacity-visibility( $duration, $function ) {
+  -webkit-transition: opacity $duration+s $function, visibility $duration+s $function;
+  transition: opacity $duration+s $function, visibility $duration+s $function;
+}
+@mixin transition-opacity-transform( $duration, $function ) {
+  -webkit-transition: opacity $duration+s $function, transform $duration+s $function;
+  transition: opacity $duration+s $function, transform $duration+s $function;
 }
 @mixin fixedCenterY() {
   position: fixed;

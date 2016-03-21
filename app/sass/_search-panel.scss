@@ -1,0 +1,101 @@
+/* --------------- search-panel --------------- */
+.search-panel {
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -66px;
+  right: 0;
+  left: 0;
+  height: 66px;
+  background: $searh-panel-back;
+
+  &__wrap {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+  }
+  label {
+    vertical-align: middle;
+    display: inline-block;
+    width: 30%;
+    max-width: 120px;
+    font-size: 15px;
+    color: $searh-panel-label-color;
+  }
+  input {
+    display: inline-block;
+    height: 27px;
+    width: 47%;
+    margin-right: 5%;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    @include main-font1();
+    color: $searh-panel-input-color;
+  }
+  button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-indent: -10000px;
+
+    &:after {
+      @include absoluteCenter();
+    }
+  }
+}
+/* --------------- /search-panel --------------- */
+
+@media (min-width: $tablet-portrait) {
+
+  /* --------------- search-panel --------------- */
+  .search-panel {
+
+    input {
+      width: 72%;
+    }
+  }
+  /* --------------- /search-panel --------------- */
+
+}
+@media (min-width: $tablet-landscape) {
+
+  /* --------------- search-panel --------------- */
+  .search-panel {
+
+    &__wrap {
+      width: 810px;
+      padding: 0 0 3px 7px;
+    }
+    label {
+      max-width: 141px;
+      font-size: 18px;
+    }
+    input {
+      width: 55%;
+      margin-right: 17px;
+    }
+    button {
+      width: auto;
+      height: 50px;
+      padding: 0 33px 0 58px;
+      text-indent: 0;
+
+      &:after {
+        left: 27px;
+        @include absoluteCenterY();
+      }
+    }
+  }
+  /* --------------- /search-panel --------------- */
+
+}
+@media (min-width: $desktop) {
+
+}
+
+
