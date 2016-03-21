@@ -15,7 +15,69 @@
 
         } );
 
+        $.each( $( '.search-panel' ), function(){
+
+            new SearchPanel ( $(this) )
+
+        } );
+
     });
+
+    var SearchPanel = function (obj) {
+
+        //private properties
+        var _obj = obj,
+            _openBtn = $( '.site__header-search-btn' ),
+            _body = $( 'body' ),
+            _site = $( '.site' );
+
+        //private methods
+        var _onEvents = function () {
+
+                _openBtn.on({
+                    click: function (event) {
+
+                        _site.toggleClass( 'site_search' );
+
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else {
+                            event.cancelBubble = true;
+                        }
+
+                    }
+                });
+
+                _obj.on({
+                    'click': function(event){
+
+                        var event = event || window.event;
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else {
+                            event.cancelBubble = true;
+                        }
+                    }
+                });
+
+                _body.on({
+                    'click': function(){
+                        _site.removeClass('site_search')
+                    }
+                });
+            },
+
+            _init = function () {
+                _onEvents();
+            };
+
+        //public properties
+
+        //public methods
+
+
+        _init();
+    };
 
     var Menu = function( obj ) {
 
@@ -53,7 +115,8 @@
                 if( curItem.hasClass( 'opened' ) ) {
 
                     curItem.removeClass( 'opened' );
-                    _menu.slideUp( 300 );
+                    _menu.removeClass( 'opened' );
+
                     _body.css({
                         'overflow': 'visible'
                     })
@@ -61,7 +124,8 @@
                 } else {
 
                     curItem.addClass( 'opened' );
-                    _menu.slideDown( 300 );
+                    _menu.addClass( 'opened' );
+
                     _body.css({
                         'overflow': 'hidden'
                     })

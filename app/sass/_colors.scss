@@ -1,8 +1,27 @@
 //site
 $site-background: #fff;
 $header-background: #fff;
+$header-contact-back: #2b2b2b;
+$header-contact-color: #fff;
+$header-contact-hover: #404040;
+$header-menu-back: #323133;
+$header-menu-color: #fff;
+$header-menu-desktop-color1: #393939;
+$header-menu-desktop-color2: #b2b2b2;
+$header-menu-desktop-color2-hover: #2b2b2b;
+$header-menu-desktop-back: #f7f8fa;
+$header-menu-line: #d7d7d9;
+$header-menu-line-hover: #c75d5d;
+$header-menu-btn-back: #000;
+$header-menu-btn-opened: #fff;
 $footer-content-color: #b4b4b4;
 $footer-background-color: #323133;
+
+/*---------- searh-panel ----------*/
+$searh-panel-back: #1c1c1c;
+$searh-panel-label-color: #8d8d8d;
+$searh-panel-input-color: #e2e2e2;
+/*---------- /searh-panel ---------*/
 
 /*---------- popup ----------*/
 $popup-back: rgba( 0, 0, 0, .5 );
@@ -27,14 +46,7 @@ $nice-checkbox-color: #000;
 /*---------- /nice-checkbox ---------*/
 
 /*---------- btn ----------*/
-$btn-back: #ff0;
-$btn-back-hover: #ffa;
-$btn-back-active: #000;
-$btn-color: #000;
-$btn-color-active: #ff0;
-
-$btn-2-back: #f00;
-$btn-2-back-hover: #f0a;
-$btn-2-back-active: #000;
-$btn-2-color-active: #f0a;
+$btn-back: #2d2d2d;
+$btn-back-hover: #434242;
+$btn-color: #fff;
 /*---------- /btn ---------*/

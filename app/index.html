@@ -17,15 +17,22 @@
     <!-- site -->
     <div class="site">
 
-        <!--search-->
-        <form class="search" action="#">
+        <!--search-panel-->
+        <form class="search-panel" action="#">
 
-            <label for="search-field">Chercher un bien:</label>
-            <input id="search-field" type="search">
-            <button type="submit">Recherche</button>
+            <!--search-panel__wrap-->
+            <div class="search-panel__wrap">
+
+                <label for="search-field">Chercher un bien:</label>
+                <input id="search-field" type="search">
+                <button class="btn btn_search" type="submit">Recherche</button>
+
+            </div>
+            <!--/search-panel__wrap-->
+
 
         </form>
-        <!--/search-->
+        <!--/search-panel-->
 
         <!-- site__header -->
         <header class="site__header">
@@ -33,13 +40,13 @@
             <!--site__header-inner-->
             <div class="site__header-inner">
 
-                <!--site__header-contacts-->
-                <a href="#" class="site__header-contacts">Contactez-nous</a>
-                <!--/site__header-contacts-->
-
                 <!--site__header-search-btn-->
                 <button class="site__header-search-btn"></button>
                 <!--/site__header-search-btn-->
+
+                <!--site__header-contacts-->
+                <a href="#" class="site__header-contacts">Contactez-nous</a>
+                <!--/site__header-contacts-->
 
             </div>
             <!--/site__header-inner-->
@@ -56,15 +63,19 @@
                 <!--language-->
                 <div class="language">
 
+                    <!--language__active-->
                     <div class="language__active">
                         <a href="#" class="language__item">Français</a>
                     </div>
+                    <!--/language__active-->
 
+                    <!--language__dropdown-->
                     <div class="language__dropdown">
                         <a href="#" class="language__item">English</a>
                         <a href="#" class="language__item">Deutch</a>
                         <a href="#" class="language__item">Niderlands</a>
                     </div>
+                    <!--/language__dropdown-->
 
                 </div>
                 <!--/languages-->
@@ -80,19 +91,19 @@
 
                     <!--site__menu-top-->
                     <ul class="site__menu-top">
-                        <li><a href="#">Evaluation</a></li>
-                        <li><a href="#">Investissement</a></li>
-                        <li><a href="#">Gestion locative</a></li>
-                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li class="site__menu-item"><a href="#">Evaluation</a></li>
+                        <li class="site__menu-item"><a href="#">Investissement</a></li>
+                        <li class="site__menu-item"><a href="#">Gestion locative</a></li>
+                        <li class="site__menu-item"><a href="#">Qui sommes-nous ?</a></li>
                     </ul>
                     <!--/site__menu-top-->
 
                     <!--site__menu-bottom-->
                     <ul class="site__menu-bottom">
-                        <li><a href="#">Location</a></li>
-                        <li><a href="#">Vente</a></li>
-                        <li><a href="#">Projet neuf</a></li>
-                        <li><a href="#">Résidence Service</a></li>
+                        <li class="site__menu-item"><a href="#">Location</a></li>
+                        <li class="site__menu-item"><a href="#">Vente</a></li>
+                        <li class="site__menu-item"><a href="#">Projet neuf</a></li>
+                        <li class="site__menu-item"><a href="#">Résidence Service</a></li>
                     </ul>
                     <!--/site__menu-bottom-->
 

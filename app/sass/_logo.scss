@@ -1,18 +1,34 @@
 .logo {
   position: absolute;
   z-index: 1;
-  top: 41px;
-  left: 14px;
+  top: 6px;
+  left: 47px;
+  width: 70px;
 
   img {
-    //width: 100%;
+    width: 100%;
+    height: auto;
   }
 
 }
 
+@media (min-width: $tablet-portrait) {
+  .logo {
+    top: 6px;
+    left: 59px;
+    width: 90px;
+  }
+}
+
 @media (min-width: $tablet-landscape) {
+
+}
+
+@media (min-width: $desktop) {
   .logo {
     top: 41px;
     left: 14px;
+    width: 143px;
+    height: 66px;
   }
 }
