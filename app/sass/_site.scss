@@ -6,6 +6,22 @@
   min-height: 100%;
   @include main-font1();
 
+  &_index{
+    padding-bottom: 184px;
+
+    .site__footer {
+      bottom: 184px;
+    }
+  }
+
+  &:after {
+    display: block;
+    width: 100%;
+    height: 382px;
+    clear: both;
+    content: '';
+  }
+
   &__header {
     position: relative;
     z-index: 4;

@@ -1,0 +1,201 @@
+.content-menu {
+
+  &__btn {
+    @include fixedCenterY();
+    right: 0;
+    z-index: 4;
+    width: 50px;
+    height: 50px;
+    background: $content-btn-back;
+    border: 1px solid $content-btn-border-color;
+    transition: transform 300ms ease-in-out, top 300ms ease-in-out, background 300ms ease-in-out;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      right: 10px;
+      display: block;
+      height: 3px;
+      margin-top: -2px;
+      background: $content-btn-gamburger-back;
+      font-size: 0;
+      -webkit-transition: background-color 0.3s;
+      transition: background-color 0.3s;
+
+      &:before,
+      &:after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $content-btn-gamburger-back;
+        content: '';
+        transition: transform 0.3s, background .3s;
+      }
+
+      &:before {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+      }
+
+      &:after {
+        -webkit-transform: translateY(6px);
+        transform: translateY(6px);
+      }
+    }
+
+    &:hover {
+      background: $content-btn-hover-back;
+    }
+  }
+
+  &__layout {
+    @include flexbox();
+    @include flex-direction( column );
+    @include justify-content( center );
+    @include align-items( center );
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $content-layout-back;
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out, transform 300ms ease-in-out;
+    transform: translateX( 100% );
+  }
+
+  &__item {
+    @include flexbox();
+    @include flex-direction( column );
+    @include justify-content( center );
+    @include align-items( center );
+    width: 300px;
+    height: 15%;
+    margin: 0 0 20px;
+    text-align: center;
+    @include main-font2();
+    font-size: 20px;
+    line-height: 20px;
+    color: $content-menu-color;
+    text-transform: uppercase;
+    background-size: cover;
+    letter-spacing: 3px;
+    transition: color 300ms ease-in-out;
+
+    span{
+      display: inline-block;
+      vertical-align: top;
+      padding: 12px 27px;
+      background: $content-item-back;
+      transition: background 300ms ease-in-out;
+    }
+
+    &:hover {
+      color: $content-menu-hover-color;
+
+      span{
+        background: $content-item-hover-back;
+      }
+
+    }
+  }
+
+  &_location {
+    background-image: url("../img/content-menu-bg1.jpg");
+  }
+
+  &_sale {
+    background-image: url("../img/content-menu-bg2.jpg");
+  }
+
+  &_new-projects {
+    background-image: url("../img/content-menu-bg3.jpg");
+  }
+
+  &_homes {
+    background-image: url("../img/content-menu-bg4.jpg");
+  }
+
+  &.opened {
+
+    .content-menu__btn {
+      top: 20px;
+      z-index: 15;
+      transform: translateY( 0 );
+
+      span {
+        background-color: transparent;
+
+        &:before {
+          transform: translateY(0) rotate(45deg);
+        }
+
+        &:after {
+          transform: translateY(0) rotate(-45deg);
+        }
+      }
+    }
+
+    .content-menu__layout{
+      opacity: 1;
+      visibility: visible;
+      transform: translateX( 0 );
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .content-menu {
+    transition: opacity 300ms ease-in-out;
+
+    &_absolute {
+
+      .content-menu__layout {
+        position: absolute;
+      }
+
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__layout {
+      @include flex-direction( row );
+      opacity: 1;
+      visibility: visible;
+      position: fixed;
+      z-index: 10;
+      top: auto;
+      bottom: 0;
+      width: 100%;
+      height: 184px;
+      background: transparent;
+      transform: translateX( 0 );
+    }
+
+    &__item {
+      width: 25%;
+      height: 100%;
+      padding: 10px;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .content-menu {
+
+    &__item {
+      font-size: 29px;
+      line-height: 29px;
+    }
+  }
+}
