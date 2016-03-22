@@ -296,10 +296,10 @@
   }
 
   &__title {
-    margin: 0 0 20px;
+    margin: 0 0 7px;
     color: $site-title-color;
-    font-size: 28px;
-    line-height: 31px;
+    font-size: 32px;
+    line-height: 35px;
     @include main-font2();
     font-weight: normal;
   }
@@ -428,25 +428,28 @@
   }
 }
 @media (min-width: $tablet-landscape) {
+  .site {
 
-  &_index{
-    padding-bottom: 184px;
+    &_index{
+      padding-bottom: 184px;
 
-    .site__footer {
-      bottom: 184px;
+      .site__footer {
+        bottom: 184px;
+      }
+    }
+
+    &__footer-menu {
+
+      li {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        margin: 0 0 10px;
+        padding: 0;
+      }
     }
   }
 
-  &__footer-menu {
-
-    li {
-      display: inline-block;
-      vertical-align: top;
-      width: 49%;
-      margin: 0 0 10px;
-      padding: 0;
-    }
-  }
 }
 @media (min-width: $desktop) {
   .site {
@@ -479,6 +482,7 @@
         }
       }
     }
+
     &__menu {
       position: absolute;
       top: 54px;
@@ -593,14 +597,12 @@
     }
 
     &__title {
-      margin: 0 0 20px;
       font-size: 48px;
       line-height: 51px;
     }
   }
 }
 @media (min-width: $desktop-wide) {
-
   .site {
 
     &__header {

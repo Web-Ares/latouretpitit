@@ -1,11 +1,8 @@
 .btn {
+  display: inline-block;
+  vertical-align: top;
   position: relative;
   height: 50px;
-  display: flex;
-  text-align: left;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   border: none;
   border-radius: 4px;
   padding: 0 10px;
@@ -25,6 +22,7 @@
     color: $btn-color;
     background: $btn-back-hover;
   }
+
   &_search {
     padding: 0 33px 0 58px;
 
@@ -36,6 +34,19 @@
       background: url(../img/search-icon_2.png) no-repeat;
       background-size: contain;
       content: '';
+    }
+  }
+
+  &_2 {
+    padding: 24px 10px;
+    height: 60px;
+    background: $btn2-back;
+    color: $btn2-color;
+    width: 277px;
+    text-align: center;
+
+    &:hover {
+      background: $btn2-back-hover;
     }
   }
 }

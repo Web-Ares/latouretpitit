@@ -1,9 +1,11 @@
 .open-day {
-  background: url("../img/open-day-bg.jpg") no-repeat right center #252526;
+  padding: 40px 0;
+  background: $open-day-back;
 
   &__time {
     display: block;
-    color: #cacaca;
+    margin: 0 0 30px;
+    color: $open-day-time-color;
     font-size: 24px;
     line-height: 27px;
     @include main-font4();
@@ -11,20 +13,31 @@
 
   &__project-name {
     display: block;
+    margin: 0 0 17px;
     font-size: 14px;
     line-height: 17px;
     text-transform: uppercase;
-    color: #fff;
+    color: $open-day-proj-name-color;
     @include main-font2();
+    letter-spacing: 1.5px;
 
     span {
       color: #edc484;
     }
   }
+
 }
 
 @media (min-width: $tablet-landscape) {
   .open-day {
+    padding: 148px 0 157px;
+    background: url("../img/open-day-bg.jpg") no-repeat right center $open-day-back;
+    background-size: auto 100%;
+
+    .btn {
+      @include absoluteCenterY();
+      right: 1.5%;
+    }
 
   }
 }
