@@ -9,13 +9,13 @@
 
     <title>Title</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/single-page.css">
 
 </head>
 <body>
 
     <!-- site -->
-    <div class="site site_index">
+    <div class="site">
 
         <!--search-panel-->
         <form class="search-panel" action="#">
@@ -119,166 +119,38 @@
         <!-- site__content -->
         <div class="site__content">
 
-            <!-- research-panel -->
-            <div class="research-panel">
+            <!-- interested-you -->
+            <div class="interested-you">
 
                 <!-- site__centered -->
                 <div class="site__centered">
-                    <h2 class="site__title site__title_2"><span>L’immobilier</span> en confiance</h2>
+                    <h2 class="site__title site__title_4">Ce bien vous intéresse ?</h2>
 
-                    <!-- research-panel__items -->
-                    <form action="#" class="research-panel__items">
+                    <!-- interested-you__text -->
+                    <div class="interested-you__text">Appelez-nous au <a href="tel:02/ 777 19 19">02/ 777 19 19</a> ou envoyez nous un mail via ce formulaire</div>
+                    <!-- /interested-you__text -->
 
-                        <!-- research-panel__main-input -->
-                        <div class="research-panel__main-input">
-
-                            <!-- research-panel__type -->
-                            <div class="research-panel__type">
-                                <span>Acheter</span>
-                                <span>Louer</span>
-                            </div>
-                            <!-- /research-panel__type -->
-
-                            <input type="search" name="search2" class="research-panel__search">
-
+                    <!-- interested-you__info -->
+                    <form class="interested-you__info" action="#">
+                        <div>
+                            <input type="tel" required name="tel" placeholder="1. Votre nom">
+                            <input type="email" required name="email" placeholder="2. Votre e-mail">
                         </div>
-                        <!-- /research-panel__main-input -->
-
-                        <!-- research-panel__send -->
-                        <button class="btn btn_3 research-panel__send" type="submit">Recherche</button>
-                        <!-- /research-panel__send -->
-
-                        <!-- research-panel__drop-downs -->
-                        <div class="research-panel__drop-downs">
-
-                            <!-- drop-down-item -->
-                            <div class="drop-down-item drop-down-item_type">
-
-                                <div class="drop-down-item__wrap">
-                                    <span>Type</span>
-                                </div>
-
-
-                                <!-- drop-down-item__menu -->
-                                <div class="drop-down-item__menu">
-                                    <ul>
-                                        <li>Appartement</li>
-                                        <li>Terrain</li>
-                                        <li class="active">Maison</li>
-                                        <li>Garage</li>
-                                    </ul>
-                                </div>
-                                <!-- /drop-down-item__menu -->
-
-                            </div>
-                            <!-- /drop-down-item -->
-
-                            <!-- drop-down-item -->
-                            <div class="drop-down-item drop-down-item_big drop-down-item_location">
-
-                                <div class="drop-down-item__wrap">
-                                    <span>Localisation</span>
-                                </div>
-
-                                <!-- drop-down-item__menu -->
-                                <div class="drop-down-item__menu">
-                                    <ul>
-                                        <li>1070 Anderlecht</li>
-                                        <li>1040 Etterbeek</li>
-                                        <li>1050 Ixelles</li>
-                                        <li>1050 Ixelles</li>
-                                        <li>1050 Ixelles</li>
-                                        <li>1160 Auderghem</li>
-                                        <li>1140 Evere</li>
-                                        <li>1090 Jette</li>
-                                        <li>1090 Jette</li>
-                                        <li>1090 Jette</li>
-                                        <li>1082 Berchem-St-Agathe</li>
-                                        <li>1190 Forest</li>
-                                        <li>1081 Koekelberg</li>
-                                        <li>1081 Koekelberg</li>
-                                        <li>1081 Koekelberg</li>
-                                        <li>1000 Bruxelles-Ville</li>
-                                        <li class="active">1200 Woluwe-St-Lambert</li>
-                                        <li>1150 Woluwe-St-Pierre</li>
-                                        <li>1950 Kraainem</li>
-                                        <li>1950 Kraainem</li>
-                                    </ul>
-                                </div>
-                                <!-- /drop-down-item__menu -->
-
-                            </div>
-                            <!-- /drop-down-item -->
-
-                            <!-- drop-down-item -->
-                            <div class="drop-down-item drop-down-item_rooms">
-
-                                <div class="drop-down-item__wrap">
-                                    <span>Chambres</span>
-                                </div>
-
-                                <!-- drop-down-item__menu -->
-                                <div class="drop-down-item__menu">
-                                    <ul>
-                                        <li>1 chambre</li>
-                                        <li>2 chambres</li>
-                                        <li class="active">3 chambres</li>
-                                        <li>4 chambres ou +</li>
-                                    </ul>
-                                </div>
-                                <!-- /drop-down-item__menu -->
-
-                            </div>
-                            <!-- /drop-down-item -->
-
+                        <div>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
                         </div>
-                        <!-- /research-panel__drop-downs -->
-
+                        <button class="btn btn_4 interested-you__send" type="submit"><span>ENVOYER</span></button>
                     </form>
-                    <!-- /research-panel__items -->
+                    <!-- /interested-you__info -->
 
                 </div>
                 <!-- /site__centered -->
 
             </div>
-            <!-- /research-panel -->
-
-            <!-- open-day -->
-            <div class="open-day">
-
-                <!-- site__centered -->
-                <div class="site__centered">
-                    <span class="open-day__project-name">PROJET <span>ABC</span></span>
-                    <h2 class="site__title">Journee portes ouvertes</h2>
-                    <time class="open-day__time" datetime="9:30">Ce samedi de 9h30 à 12h30</time>
-                    <a href="#" class="btn btn_2">PLUS D’INFORMATIONS</a>
-                </div>
-                <!-- /site__centered -->
-
-            </div>
-            <!-- /open-day -->
+            <!-- /interested-you -->
 
         </div>
         <!-- /site__content -->
-
-        <!-- content-menu -->
-        <div class="content-menu">
-
-            <!-- content-menu__btn -->
-            <button class="content-menu__btn"><span>open</span></button>
-            <!-- content-menu__btn -->
-
-            <!-- content-menu__layout -->
-            <div class="content-menu__layout">
-                <a class="content-menu__item content-menu_location" href="#"><span>Location</span></a>
-                <a class="content-menu__item content-menu_sale" href="#"><span>Vente</span></a>
-                <a class="content-menu__item content-menu_new-projects" href="#"><span>Projets Neufs</span></a>
-                <a class="content-menu__item content-menu_homes" href="#"><span>Residences</span></a>
-            </div>
-            <!-- /content-menu__layout -->
-
-        </div>
-        <!-- /content-menu -->
 
         <!-- site__footer -->
         <footer class="site__footer">

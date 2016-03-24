@@ -6,7 +6,7 @@
   border: none;
   border-radius: 4px;
   padding: 0 10px;
-  background: $btn-back;
+  background-color: $btn-back;
   font-size: 16px;
   text-transform: uppercase;
   color: $btn-color;
@@ -15,12 +15,12 @@
   @include transition(background, .3, 0);
 
   &:hover {
-    background: $btn-back-hover;
+    background-color: $btn-back-hover;
   }
 
   &:active {
     color: $btn-color;
-    background: $btn-back-hover;
+    background-color: $btn-back-hover;
   }
 
   &_search {
@@ -38,15 +38,48 @@
   }
 
   &_2 {
-    padding: 24px 10px;
-    height: 60px;
-    background: $btn2-back;
+    padding: 19px 10px;
+    height: 50px;
+    background-color: $btn2-back;
     color: $btn2-color;
     width: 277px;
     text-align: center;
 
     &:hover {
-      background: $btn2-back-hover;
+      background-color: $btn2-back-hover;
+    }
+  }
+
+  &_3 {
+    width: 100%;
+    padding: 17px 17px 17px 43px;
+    height: 50px;
+    background-image: url("../img/search-icon_3.png");
+    background-color: $btn3-back;
+    background-repeat: no-repeat;
+    background-position: 28px center;
+    background-size: 15px;
+    color: $btn3-color;
+    text-align: center;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+
+    &:hover {
+      background-color: $btn3-back-hover;
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .btn {
+
+    &_2 {
+      padding: 24px 10px;
+      height: 60px;
+    }
+
+    &_3 {
+      padding: 24px 17px 24px 43px;
+      height: 70px;
     }
   }
 }

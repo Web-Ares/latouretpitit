@@ -297,11 +297,45 @@
 
   &__title {
     margin: 0 0 7px;
-    color: $site-title-color;
+    color: $site-title-color1;
     font-size: 32px;
     line-height: 35px;
     @include main-font2();
     font-weight: normal;
+
+    &_2 {
+       margin: 0 0 26px;
+       text-align: center;
+       color: $site-title-color2;
+
+       span {
+         @include main-font4();
+         color: $site-title-color3;
+       }
+     }
+
+    &_3 {
+      margin: 0 0 26px;
+      color: $site-title-color4;
+      font-size: 30px;
+      line-height: 35px;
+      @include main-font5();
+    }
+
+    &_4 {
+      margin: 0 0 26px;
+      text-align: center;
+      color: $site-title-color5;
+      font-size: 22px;
+      line-height: 26px;
+      @include main-font5();
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    background: $site-content-background;
   }
 
 }
@@ -446,6 +480,13 @@
         width: 49%;
         margin: 0 0 10px;
         padding: 0;
+      }
+    }
+
+    &__title {
+
+      &_2 {
+        margin: 0 0 56px;
       }
     }
   }
@@ -599,6 +640,15 @@
     &__title {
       font-size: 48px;
       line-height: 51px;
+
+      &_3 {
+        font-size: 30px;
+        line-height: 35px;
+      }
+      &_4 {
+        font-size: 22px;
+        line-height: 26px;
+      }
     }
   }
 }

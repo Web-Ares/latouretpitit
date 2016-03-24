@@ -1,0 +1,152 @@
+.drop-down-item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 100%;
+  margin: 0 0 20px;
+  text-align: center;
+  color: $dropdown-item-color;
+  font-size: 15px;
+  line-height: 15px;
+  @include main-font3();
+  @include transition( padding, 0.3, 0 );
+
+  &.active {
+    z-index: 10;
+
+    &:after {
+      -webkit-transform: translate( 0, -50% ) rotate( 45deg );
+      transform: translate( 0, -50% ) rotate( 45deg );
+    }
+
+    .drop-down-item__menu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: 43px;
+    background: $dropdown-item-wrap-back;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      top: 49%;
+      right: 19px;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid $dropdown-item-wrap-border-color;
+      border-left: 1px solid $dropdown-item-wrap-border-color;
+      content: '';
+      -webkit-transform: translate( 0, -50% ) rotate( -135deg );
+      transform: translate( 0, -50% ) rotate( -135deg );
+    }
+
+    span {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 32px;
+      left: 0;
+      height: 100%;
+      padding: 15px 0 15px 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__menu {
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    width: 100%;
+    border-radius: 3px;
+    background: $dropdown-item-menu-back;
+    box-shadow: -1px 1px 5px 0 $dropdown-item-menu-box-shadow;
+    @include transition-opacity-visibility( 0.3, linear );
+
+    ul {
+      overflow: hidden;
+      margin: -1px;
+
+      li {
+        overflow: hidden;
+        float: left;
+        padding: 17px 0;
+        width: 50%;
+        height: 50px;
+        border: 1px solid $dropdown-item-menu-item-border-color;
+        cursor: pointer;
+        text-overflow: ellipsis;
+
+        &.active ,
+        &.active:hover {
+          background: $dropdown-item-menu-item-active-back;
+          color: $dropdown-item-menu-item-active-color;
+          cursor: default;
+        }
+
+        &:hover {
+          background: $dropdown-item-menu-item-hover-back;
+          color: $dropdown-item-menu-item-hover-color;
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .drop-down-item {
+
+    &_big {
+
+      .drop-down-item__menu {
+        width: 828px;
+        @include transform-translate( -31%, 0 );
+        font-size: 13px;
+        line-height: 13px;
+
+        ul {
+          li{
+            padding: 20px 0;
+            width: 166px;
+          }
+        }
+      }
+
+    }
+
+    &_type {
+      width: 25%;
+    }
+
+    &_location {
+      width: 38%;
+    }
+
+    &_rooms {
+      width: 34%;
+    }
+
+    &__menu {
+      width: 293px;
+
+      ul {
+
+        li {
+          width: 147px;
+        }
+      }
+    }
+
+  }
+}

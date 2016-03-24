@@ -1,0 +1,114 @@
+.research-panel {
+  padding: 40px 0;
+  background: url("../img/research-bg.jpg") no-repeat center;
+  background-size: cover;
+
+  &__items {
+    position: relative;
+    max-width: 780px;
+    padding: 0 6px;
+    margin: 0 auto;
+  }
+
+  &__main-input {
+    overflow: hidden;
+    position: relative;
+    margin: 0 0 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px 0 $research-panel-input-box-shadow;
+    background: $research-panel-input-back;
+  }
+
+  &__type {
+    @include flexbox();
+    @include flex-direction( column );
+    @include justify-content( center );
+    @include align-items( center );
+    padding: 10px;
+    border-bottom: 2px solid $research-panel-type-border-color;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    color: $research-panel-type-color;
+    @include main-font3();
+
+    span {
+      display: block;
+      overflow: hidden;
+      margin: 6px 0 0 0;
+      max-width: 100%;
+      text-overflow: ellipsis;
+      cursor: pointer;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &.active {
+        color: $research-panel-type-active-color;
+      }
+    }
+  }
+
+  &__search {
+    padding: 24px 7px;
+    width: 100%;
+    height: 70px;
+    border: none;
+    background: $research-panel-search-back;
+    font-size: 18px;
+    line-height: 18px;
+    color: $research-panel-search-color;
+    @include main-font3();
+  }
+
+  &__drop-downs {
+    padding: 20px 0 0;
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .research-panel {
+    padding: 207px 0 255px;
+
+    &__main-input {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 0 0 13.4%;
+      margin: 0 0 10px;
+      width: 73%;
+    }
+
+    &__type {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18.4%;
+      height: 100%;
+      padding: 0;
+      border-right: 2px solid $research-panel-type-border-color;
+      border-bottom: none;
+    }
+
+    &__send {
+      position: absolute;
+      top: 0;
+      right: 9px;
+      width: 25%;
+    }
+
+    &__search {
+      padding: 24px 15px;
+    }
+
+    &__drop-downs {
+      @include flexbox();
+      @include flex-direction();
+      @include justify-content( space-between );
+      @include align-items( flex-start );
+      padding: 0 27% 0 13.4%;
+    }
+
+  }
+}
