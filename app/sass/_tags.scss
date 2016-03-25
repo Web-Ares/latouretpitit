@@ -1,0 +1,87 @@
+.tags {
+  position: relative;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    background: #f2f3f5;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color: #8b8b8b;
+    font-size: 14px;
+    line-height: 14px;
+    @include main-font2();
+
+
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+    }
+
+    &_surface {
+
+      &:after {
+        width: 23px;
+        height: 23px;
+        background-image: url("../img/tag-surface.png");
+      }
+
+    }
+
+    &_chambers {
+
+      &:after {
+        width: 30px;
+        height: 19px;
+        background-image: url("../img/tag-chamber.png");
+      }
+
+    }
+
+    &_shower {
+
+      &:after {
+        width: 21px;
+        height: 22px;
+        background-image: url("../img/tag-shower.png");
+      }
+
+    }
+
+    &_parking {
+
+      &:after {
+        width: 16px;
+        height: 20px;
+        background-image: url("../img/tag-parking.png");
+      }
+
+    }
+
+    &_peb-c {
+
+      &:after {
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/tag-peb-c.png");
+      }
+
+    }
+
+    &_peb-f {
+
+      &:after {
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/tag-peb-f.png");
+      }
+
+    }
+
+  }
+
+}

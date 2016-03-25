@@ -1,0 +1,14 @@
+.tabs {
+  transition: min-height 0.3s linear;
+
+  dl {
+
+    dt {
+      cursor: pointer;
+    }
+
+    dd {
+      display: none;
+    }
+  }
+}

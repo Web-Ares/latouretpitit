@@ -8,6 +8,7 @@
   padding: 0 10px;
   background-color: $btn-back;
   font-size: 16px;
+  line-height: 16px;
   text-transform: uppercase;
   color: $btn-color;
   letter-spacing: 1px;
@@ -67,6 +68,24 @@
       background-color: $btn3-back-hover;
     }
   }
+
+  &_4 {
+    padding: 50px 17px 10px 17px;
+    height: 80px;
+    background-image: url("../img/send-icon.png");
+    background-color: #c75d5d;
+    background-repeat: no-repeat;
+    background-position: center 6px;
+    background-size: 34px 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+
+    &:hover {
+      background-color: $btn3-back-hover;
+    }
+  }
 }
 
 @media (min-width: $tablet-landscape) {
@@ -80,6 +99,13 @@
     &_3 {
       padding: 24px 17px 24px 43px;
       height: 70px;
+    }
+
+    &_4 {
+      padding: 63px 10px 10px;
+      height: 117px;
+      background-position: center 28px;
+
     }
   }
 }

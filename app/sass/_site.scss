@@ -315,7 +315,7 @@
      }
 
     &_3 {
-      margin: 0 0 26px;
+      margin: 0 0 7px;
       color: $site-title-color4;
       font-size: 30px;
       line-height: 35px;
@@ -323,7 +323,7 @@
     }
 
     &_4 {
-      margin: 0 0 26px;
+      margin: 0 0 12px;
       text-align: center;
       color: $site-title-color5;
       font-size: 22px;
@@ -336,6 +336,15 @@
     position: relative;
     z-index: 1;
     background: $site-content-background;
+  }
+
+  &__subtitle {
+    display: block;
+    margin: 0 0 35px;
+    color: $site-subtitle-color1;
+    font-size: 22px;
+    line-height: 26px;
+    @include main-font5();
   }
 
 }

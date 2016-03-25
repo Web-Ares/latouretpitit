@@ -1,0 +1,116 @@
+.closer-objects {
+  position: relative;
+  padding: 40px 0;
+  color: $closer-objects-content-color1;
+  font-size: 16px;
+  line-height: 26px;
+
+  &__tabs {
+    counter-reset: list;
+
+    dl {
+      position: relative;
+
+      dt {
+        position: relative;
+        padding: 0 0 0 19px;
+        font-size: 18px;
+        line-height: 22px;
+        color: $closer-objects-tabs-btn-color1;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          position: relative;
+          padding: 0 0 13px 0;
+
+          &:after {
+            opacity: 0;
+            @include absoluteCenterX();
+            bottom: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 5px;
+            background: #c75d5d;
+            content: '';
+            -webkit-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;
+          }
+
+        }
+
+        &.active {
+          color: $closer-objects-tabs-btn-active-color1;
+
+          span {
+
+            &:after {
+              opacity: 1;
+            }
+
+          }
+
+        }
+
+        &:before {
+          position: absolute;
+          top: -1px;
+          left: 0;
+          @include main-font6();
+          counter-increment: list;
+          content: counter(list) ".";
+        }
+
+      }
+
+      dd {
+        padding: 29px 0;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .closer-objects {
+    padding: 84px 0 106px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 34.1%;
+      height: 100%;
+      background: url("../img/closer-obj-bg.jpg") center no-repeat;
+      background-size: cover;
+    }
+
+    &__tabs {
+      max-width: 58%;
+
+      dl {
+
+        dt{
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 28px 20px 0;
+
+          &.active + dd {
+            display: block;
+          }
+        }
+
+        dd {
+          position: absolute;
+          top: 35px;
+          left: 0;
+        }
+
+      }
+
+    }
+
+  }
+}
