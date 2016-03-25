@@ -5,7 +5,6 @@
   left: 142px;
   top: 13px;
   padding: 0 10px 0 23px;
-  color: #000;
   font-size: 14px;
   line-height: 14px;
   height: 20px;
@@ -22,18 +21,19 @@
     content: '';
   }
 
-  a{
+  &__item {
     overflow: hidden;
     vertical-align: top;
     display: block;
-    color: #1d1d1d;
+    color: $language-color;
     text-overflow: ellipsis;
     padding: 2px 0;
     font-size: 16px;
+    cursor: pointer;
     transition: color .3s ease;
 
     &:hover{
-      color: #4a4949;
+      color: $language-hover;
     }
   }
 
@@ -42,7 +42,7 @@
     position: relative;
     top: 5px;
 
-    a {
+    .language__item {
       margin-bottom: 3px;
     }
   }

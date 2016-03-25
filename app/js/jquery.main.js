@@ -190,8 +190,6 @@
                 _obj.on( {
                     mouseenter: function() {
 
-                        console.log(101);
-
                         clearTimeout(_mouseleaveTimeout);
 
                         _mouseenterTimeout = setTimeout(function(){
