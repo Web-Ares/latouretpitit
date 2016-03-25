@@ -1,0 +1,13 @@
+.other-property {
+  position: relative;
+  padding: 40px 0;
+  background: #fff;
+
+}
+
+@media (min-width: $tablet-landscape) {
+  .other-property {
+    padding: 113px 0 106px;
+
+  }
+}

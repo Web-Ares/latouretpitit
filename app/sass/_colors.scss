@@ -6,6 +6,7 @@ $site-title-color2: #c75d5d;
 $site-title-color3: #5c5c5c;
 $site-title-color4: #000;
 $site-title-color5: #fff;
+$site-subtitle-color1: #000;
 $header-background: #fff;
 $header-contact-back: #2b2b2b;
 $header-contact-color: #fff;
@@ -60,12 +61,15 @@ $nice-checkbox-color: #000;
 $btn-back: #2d2d2d;
 $btn2-back: #fff;
 $btn3-back: #c75d5d;
+$btn4-back: #c75d5d;
 $btn-back-hover: #434242;
 $btn2-back-hover: #cdcdcd;
 $btn3-back-hover: #e97d7d;
+$btn4-back-hover: #e97d7d;
 $btn-color: #fff;
 $btn2-color: #0c0c0c;
 $btn3-color: #fff;
+$btn4-color: #fff;
 /*---------- /btn ---------*/
 
 /*---------- content-menu ---------*/
@@ -114,3 +118,17 @@ $research-panel-search-color: #1f1f1f;
 $language-color: #1d1d1d;
 $language-hover: #6d6d6d;
 /*---------- language ---------*/
+
+/*---------- interested-you ---------*/
+$interested-you-back: #202020;
+$interested-you-color: #dcdcdc;
+$interested-you-link-color: #f1675e;
+$interested-you-field-border-color: #bdbdbd;
+$interested-you-field-color: #cccccc;
+/*---------- /interested-you ---------*/
+
+/*---------- closer-objects ---------*/
+$closer-objects-content-color1: #7a7a7a;
+$closer-objects-tabs-btn-color1: #000;
+$closer-objects-tabs-btn-active-color1: #c75d5d;
+/*---------- /closer-objects ---------*/

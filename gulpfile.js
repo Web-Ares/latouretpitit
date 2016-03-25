@@ -111,7 +111,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('pictures', function() {
-    return gulp.src(paths.images)
+    return gulp.src(paths.pictures)
         .pipe(imagemin({optimizationLevel: 5}))
         .pipe(gulp.dest('dist/pic'));
 });

@@ -1,18 +1,21 @@
 .interested-you {
-  background: #202020;
-  color: #dcdcdc;
+  padding: 40px 0;
+  background: $interested-you-back;
+  color: $interested-you-color;
   font-size: 18px;
   line-height: 23px;
 
   &__text {
+    margin: 0 0 38px;
     text-align: center;
 
     a{
-      color: #f1675e;
+      color: $interested-you-link-color;
       font-size: 24px;
       line-height: 25px;
     }
   }
+
   &__info {
     input,
     textarea {
@@ -20,20 +23,46 @@
       vertical-align: top;
       width: 100%;
       height: 51px;
-      padding: 10px 10px;
-      border: 2px solid #bdbdbd;
+      margin: 0 0 13px;
+      padding: 16px 17px;
+      border: 2px solid $interested-you-field-border-color;
       border-radius: 3px;
       background: transparent;
-      color: #cccccc;
+      color: $interested-you-field-color;
       font-size: 16px;
-      line-height: 16px;
+      line-height: 17px;
       @include main-font3();
+    }
+
+    textarea {
+      height: 114px;
     }
   }
 }
 
 @media (min-width: $tablet-landscape) {
   .interested-you {
+    padding: 73px 0 67px;
 
+    &__info {
+      @include flexbox();
+      @include flex-direction();
+      @include justify-content( space-between );
+      @include align-items( flex-start );
+
+      div {
+        display: inline-block;
+        vertical-align: top;
+        width: 47.8%;
+
+        &:first-child {
+          width: 35.5%;
+        }
+      }
+    }
+
+    &__send {
+      width: 14%;
+    }
   }
 }
