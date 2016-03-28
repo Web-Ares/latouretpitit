@@ -237,6 +237,10 @@
 
     >a{
       color: $footer-color1;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -283,6 +287,10 @@
 
       a {
         color: $footer-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

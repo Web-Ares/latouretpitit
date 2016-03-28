@@ -6,20 +6,25 @@
     vertical-align: top;
     position: relative;
     background: #f2f3f5;
+    height: 35px;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 10px 11px 10px 13px;
+    margin: 0 7px 14px 0;
     color: #8b8b8b;
     font-size: 14px;
     line-height: 14px;
     @include main-font2();
 
-
     &:after {
       display: inline-block;
       vertical-align: middle;
+      position: relative;
+      top: 50%;
+      margin: 0 0 0 5px;
       background-repeat: no-repeat;
       background-size: cover;
       content: '';
+      transform: translateY( -50% );
     }
 
     &_surface {

@@ -69,8 +69,8 @@
   transform: rotate( $deg + deg );
 }
 @mixin transform-scale( $num ) {
-  -webkit-transform: rotate( $num );
-  transform: rotate( $num );
+  -webkit-transform: scale( $num );
+  transform: scale( $num );
 }
 
 //transition
