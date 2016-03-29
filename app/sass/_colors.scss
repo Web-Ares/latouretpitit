@@ -7,6 +7,7 @@ $site-title-color3: #5c5c5c;
 $site-title-color4: #000;
 $site-title-color5: #fff;
 $site-subtitle-color1: #000;
+$site-link-back-color: #c75d5d;
 $header-background: #fff;
 $header-contact-back: #2b2b2b;
 $header-contact-color: #fff;
@@ -36,7 +37,7 @@ $searh-panel-input-color: #e2e2e2;
 /*---------- /searh-panel ---------*/
 
 /*---------- popup ----------*/
-$popup-back: rgba( 0, 0, 0, .5 );
+$popup-back: rgba( 0, 0, 0, .9 );
 $popup-close-back: rgba( 255, 255, 255, 1 );
 /*---------- /popup ---------*/
 
@@ -132,3 +133,41 @@ $closer-objects-content-color1: #7a7a7a;
 $closer-objects-tabs-btn-color1: #000;
 $closer-objects-tabs-btn-active-color1: #c75d5d;
 /*---------- /closer-objects ---------*/
+
+/*---------- apartment ---------*/
+$apartment-location-color: #454545;
+$apartment-ref-color: #454545;
+$apartment-controls-links-color: #8c8c8c;
+$apartment-info-color: #fff;
+$apartment-info-back: #fff;
+$apartment-text-color: #4d4d4d;
+$apartment-specifications-back: #fff;
+$apartment-specifications-border-color: #a7a7a7;
+$apartment-num-color: #454545;
+$apartment-type-color: #939393;
+$apartment-more-color: #c75d5d;
+$apartment-more-hover-color: #fff;
+$apartment-more-border-color: #a7a7a7;
+$apartment-more-hover-back: #a7a7a7;
+$apartment-slider-btn-border-color: #121314;
+$apartment-slider-btn-back: rgba(255,255,255,0.9);
+$apartment-slider-btn-hover-back: rgba(255,255,255,1);
+/*---------- /apartment ---------*/
+
+/*---------- single-gallery ---------*/
+$single-gallery-slider-btn-border-color: #121314;
+$single-gallery-slider-btn-back: rgba(255,255,255,0.9);
+$single-gallery-slider-btn-hover-back: rgba(255,255,255,1);
+/*---------- /single-gallery ---------*/
+
+/*---------- possessions ---------*/
+$possessions-wrap-color: #000000;
+$possessions-wrap-box-shadow: rgba(0,0,0,0.4);
+$possessions-tags-border-color: #e9e9e9;
+$possessions-view-color: #c75d5d;
+/*---------- /possessions ---------*/
+
+/*---------- tags ---------*/
+$tags-icon-back: #f2f3f5;
+$tags-icon-color: #8b8b8b;
+/*---------- /tags ---------*/

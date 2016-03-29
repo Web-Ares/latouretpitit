@@ -111,6 +111,7 @@
 
       .drop-down-item__menu {
         width: 828px;
+        max-height: 200px;
         @include transform-translate( -31%, 0 );
         font-size: 13px;
         line-height: 13px;

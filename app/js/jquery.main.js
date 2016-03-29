@@ -317,6 +317,18 @@
                 } );
 
             },
+            _addNiceScroll = function( elem ) {
+                var dropMenu = elem.next(),
+                    dropMenuUl = dropMenu.find( 'ul' ),
+                    dropMenuUlHeight = dropMenuUl.outerHeight(),
+                    maxHeight = dropMenu.css( 'max-height' );
+
+                if( dropMenuUlHeight > parseInt(maxHeight) ) {
+                    dropMenu.niceScroll( {
+                        horizrailenabled: false
+                    } );
+                }
+            },
             _changeActive = function( elem, padding ) {
 
                 var curElem = elem,
@@ -332,6 +344,7 @@
                 } else {
 
                     _resetStyle();
+                    _addNiceScroll( elem );
 
                     curElem.parent().addClass( 'active' );
                     parent.css( {
