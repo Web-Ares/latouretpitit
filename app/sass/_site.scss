@@ -117,7 +117,9 @@
         color: $header-menu-color;
 
         &.active {
-          @include main-font3();
+          border-bottom: 1px solid #fff;
+          cursor: default;
+          
         }
       }
     }
@@ -598,7 +600,9 @@
               content: '';
             }
 
-            &:hover:after {
+            &:hover:after,
+            &.active:after{
+              border: none;
               opacity: 1;
               -webkit-transform: translateY(0);
               transform: translateY(0);
@@ -632,7 +636,9 @@
               transition: background .3s ease-in-out;
               content: '';
             }
-            &:hover {
+            &:hover,
+            &.active {
+              border-bottom: none;
               color: $header-menu-desktop-color2-hover;
 
               &:after {

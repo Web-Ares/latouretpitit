@@ -1,0 +1,196 @@
+.range-options {
+
+  &__aside {
+    max-width: 457px;
+    padding: 52px 0 0;
+
+    &-wrap {
+      position: relative;
+      border-radius: 4px;
+      box-shadow: 1px 1.732px 2px 0 rgba( 0, 0, 0, .2);
+      background: #fff;
+    }
+  }
+  &__form {
+    padding: 0 0 142px 0;
+
+    &-type {
+      @include justify();
+      margin-bottom: 21px;
+
+      fieldset {
+        overflow: hidden;
+        vertical-align: top;
+        display: inline-block;
+        position: relative;
+        width: 49.5%;
+        margin-bottom: 1%;
+        height: 92px;
+        border-radius: 2px;
+        background-size: 150% ;
+        background-position: center;
+
+        input {
+          opacity: 0;
+          visibility: hidden;
+        }
+        input:checked + label {
+          @include main-font2();
+
+          &:after {
+            background: rgba(245, 83, 83, .6);
+          }
+        }
+        label {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          color: #fff;
+          font-size: 18px;
+          line-height: 92px;
+          text-align: center;
+          -webkit-transition: font-family .3s ease-in-out;
+          transition: font-family .3s ease-in-out;
+
+          span {
+            position: relative;
+            z-index: 1;
+          }
+
+          &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .5);
+            transition: background .3s ease-in-out;
+            content: '';
+          }
+        }
+      }
+    }
+    &-label {
+      vertical-align: middle;
+      display: inline-block;
+      @include main-font2();
+      font-size: 18px;
+      color: #2e2e2e;
+    }
+    &-rooms {
+      @include justify();
+      padding: 0 31px 0 36px;
+      margin-bottom: 38px;
+
+      &-inner {
+        overflow: hidden;
+        vertical-align: middle;
+        display: inline-block;
+        border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 1px 1.732px 2px 0 rgba( 0, 0, 0, .1);
+
+        fieldset {
+          vertical-align: top;
+          display: inline-block;
+          position: relative;
+          width: 65px;
+          height: 43px;
+          border-radius: 2px;
+          border-left: 1px solid #ececee;
+          margin-right: -4px;
+
+          &:first-child {
+            border-left: none;
+          }
+
+          input {
+            opacity: 0;
+            visibility: hidden;
+          }
+          input:checked + label {
+            color: #fff;
+            background: #c75d5d;
+          }
+          label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #f5f6fa;
+            color: #060606;
+            font-size: 15px;
+            line-height: 42px;
+            text-align: center;
+            -webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
+            transition: background .3s ease-in-out, color .3s ease-in-out;
+          }
+        }
+      }
+    }
+    &-budget {
+      padding: 0 36px 0 36px;
+      margin-bottom: 70px;
+
+      .range-options__form-label {
+        margin-bottom: 32px;
+      }
+    }
+    &-more {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    .btn_3 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 195px;
+      height: 54px;
+      padding: 3px 0 0 27px;
+    }
+  }
+  &__disappear-btn {
+    position: absolute;
+    top: -28px;
+    right: 1px;
+    padding: 0 22px 0 0;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    color: #838383;
+    @include main-font3();
+
+    &:after {
+      position: absolute;
+      width: 15px;
+      height: 12px;
+      top: 3px;
+      right: 0;
+      background: url(../img/disapper-btn_bg.png) no-repeat;
+      background-size: contain;
+      content: '';
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .range-options {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .range-options {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .range-options {
+
+  }
+}
