@@ -1,0 +1,23 @@
+.sort {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (min-width: $tablet-portrait) {
+  .sort {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+  .sort {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .sort {
+
+  }
+}
