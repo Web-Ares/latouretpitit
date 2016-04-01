@@ -284,7 +284,7 @@
                             <!--btn-->
                             <button class="btn btn_3" type="submit">Recherche</button>
                             <!--/btn-->
-                            
+
                         </form>
                         <!--/range-options__form-->
 
@@ -295,7 +295,43 @@
                             <button class="range-options__disappear-btn">Masquer la map</button>
                             <!--/range-options__disappear-btn-->
 
-                            <img src="img/map-pic.jpg" alt="map" style="display: block; width: 100%">
+                            <!-- filter-map -->
+                            <div class="filter-map" data-map='{
+                                                            "zoom": 10,
+                                                            "center": { "lat": 50.853220, "lng": 4.355132 },
+                                                            "areas": [
+                                                                {
+                                                                    "value": 1,
+                                                                    "color": "#FF0000",
+                                                                    "coordinates": [
+                                                                        { "lat": 50.866656, "lng": 4.316337 },
+                                                                        { "lat": 50.842104, "lng": 4.404134 },
+                                                                        { "lat": 50.8132564, "lng": 4.325591 }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "value": 2,
+                                                                    "color": "#FFFF00",
+                                                                    "coordinates": [
+                                                                        { "lat": 50.866656, "lng": 4.316337 },
+                                                                        { "lat": 50.842104, "lng": 4.404134 },
+                                                                        { "lat": 50.890715, "lng": 4.363427 }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }'>
+
+                                <input type="hidden">
+
+                                <!-- filter-map__layout -->
+                                <div class="filter-map__layout">
+
+                                </div>
+                                <!-- /filter-map__layout -->
+
+                            </div>
+                            <!-- /filter-map -->
+
 
                         </div>
                         <!--/range-options__map-->
@@ -425,6 +461,8 @@
     <script src="js/vendors/jquery-2.2.1.min.js"></script>
     <script src="js/vendors/jquery-ui.min.js"></script>
     <script src="js/vendors/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/list.min.js"></script>
+
 </body>
 </html>
