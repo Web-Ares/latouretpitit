@@ -5,12 +5,12 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
-    background: #f2f3f5;
+    background: $tags-icon-back;
     height: 35px;
     border-radius: 5px;
     padding: 10px 11px 10px 13px;
     margin: 0 7px 14px 0;
-    color: #8b8b8b;
+    color: $tags-icon-color;
     font-size: 14px;
     line-height: 14px;
     @include main-font2();

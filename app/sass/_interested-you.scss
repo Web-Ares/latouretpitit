@@ -17,7 +17,11 @@
   }
 
   &__info {
-    input,
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    input[type='phone'],
+    input[type='number'],
     textarea {
       display: inline-block;
       vertical-align: top;
