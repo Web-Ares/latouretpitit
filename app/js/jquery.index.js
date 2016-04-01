@@ -124,7 +124,12 @@
         //public properties
 
         //public methods
-
+        _self.showBlock = function() {
+            _obj.addClass( 'opened' );
+        };
+        _self.hideBlock = function() {
+            _obj.removeClass( 'opened' );
+        };
 
         _init();
     };
