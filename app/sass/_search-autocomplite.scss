@@ -20,7 +20,7 @@
 
       &:before {
         @include absoluteCenter();
-        width: 15px;
+        width: 16px;
         height: 16px;
         background: url(../img/search-icon_2.png) no-repeat;
         background-size: contain;
@@ -45,14 +45,19 @@
     border: none;
     padding: 0;
     background: #f5f6fa;
+    @include transition(background, .3, 0);
 
     &:before {
       @include absoluteCenter();
+      left: 54%;
       width: 24px;
       height: 16px;
       background: url(../img/list_icon.png) no-repeat;
       background-size: contain;
       content: '';
+    }
+    &:hover {
+      background: #e8e9ea;
     }
   }
   &__result {
@@ -81,6 +86,13 @@
       margin-left: 12px;
       background: url(../img/close-icon.png) no-repeat;
       background-size: contain;
+      @include transition(transform, .3, 0);
+      cursor: pointer;
+
+      &:hover {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
     }
   }
 

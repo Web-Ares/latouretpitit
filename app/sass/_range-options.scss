@@ -6,17 +6,23 @@
 
     &-wrap {
       position: relative;
+      margin-bottom: 59px;
       border-radius: 4px;
       box-shadow: 1px 1.732px 2px 0 rgba( 0, 0, 0, .2);
       background: #fff;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
   &__form {
-    padding: 0 0 142px 0;
+    padding: 0 0 140px 0;
 
     &-type {
       @include justify();
       margin-bottom: 21px;
+      margin-right: -1px;
 
       fieldset {
         overflow: hidden;
@@ -40,6 +46,12 @@
           &:after {
             background: rgba(245, 83, 83, .6);
           }
+          &:hover {
+
+            &:after {
+              background: rgba(245, 83, 83, .6);
+            }
+          }
         }
         label {
           position: absolute;
@@ -51,8 +63,7 @@
           font-size: 18px;
           line-height: 92px;
           text-align: center;
-          -webkit-transition: font-family .3s ease-in-out;
-          transition: font-family .3s ease-in-out;
+          @include transition(font-family, .3, 0);
 
           span {
             position: relative;
@@ -66,8 +77,14 @@
             bottom: 0;
             left: 0;
             background: rgba(0, 0, 0, .5);
-            transition: background .3s ease-in-out;
+            @include transition(background, .3, 0);
             content: '';
+          }
+          &:hover {
+
+            &:after {
+              background: rgba(0, 0, 0, .7);
+            }
           }
         }
       }
@@ -93,14 +110,13 @@
         box-shadow: 1px 1.732px 2px 0 rgba( 0, 0, 0, .1);
 
         fieldset {
-          vertical-align: top;
-          display: inline-block;
+          float: left;
           position: relative;
-          width: 65px;
+          width: 64px;
           height: 43px;
           border-radius: 2px;
           border-left: 1px solid #ececee;
-          margin-right: -4px;
+          //margin-right: -4px;
 
           &:first-child {
             border-left: none;
@@ -113,6 +129,10 @@
           input:checked + label {
             color: #fff;
             background: #c75d5d;
+
+            &:hover {
+              background: #c75d5d;
+            }
           }
           label {
             position: absolute;
@@ -123,10 +143,13 @@
             background: #f5f6fa;
             color: #060606;
             font-size: 15px;
-            line-height: 42px;
+            line-height: 45px;
             text-align: center;
-            -webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
             transition: background .3s ease-in-out, color .3s ease-in-out;
+
+            &:hover {
+              background: #e5e7eb;
+            }
           }
         }
       }
@@ -136,13 +159,33 @@
       margin-bottom: 70px;
 
       .range-options__form-label {
-        margin-bottom: 32px;
+        margin-bottom: 31px;
       }
     }
     &-more {
       position: absolute;
-      left: 0;
-      bottom: 0;
+      left: 38px;
+      bottom: 22px;
+      padding-left: 42px;
+      font-size: 16px;
+      color: #2a2a2a;
+      cursor: pointer;
+      @include main-font3();
+      @include transition(color, .3, 0);
+
+      &:before {
+        position: absolute;
+        top: 4px;
+        left: 1px;
+        width: 27px;
+        height: 7px;
+        background: url(../img/btn-more_bg.png) no-repeat;
+        background-size: contain;
+        content: '';
+      }
+      &:hover {
+        color: #cecece;
+      }
     }
     .btn_3 {
       position: absolute;
@@ -163,6 +206,7 @@
     font-size: 15px;
     color: #838383;
     @include main-font3();
+    @include transition(color, .3, 0);
 
     &:after {
       position: absolute;
@@ -172,7 +216,16 @@
       right: 0;
       background: url(../img/disapper-btn_bg.png) no-repeat;
       background-size: contain;
+      @include transition(opacity, .3, 0);
       content: '';
+    }
+
+    &:hover {
+      color: #ababab;
+
+      &:after {
+        opacity: .8;
+      }
     }
   }
 }

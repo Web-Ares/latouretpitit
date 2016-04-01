@@ -25,6 +25,15 @@ var paths = {
             ]
         },
         {
+            dist: 'list.min.js',
+            contains: [
+                'app/js/jquery.index.js',
+                'app/js/jquery.main.js',
+                'app/js/jquery.budget-slider.js',
+                'app/js/jquery.websters-select.js'
+            ]
+        },
+        {
             dist: 'ui.min.js',
             contains: [
                 'app/js/jquery.popup.js',
@@ -111,7 +120,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('pictures', function() {
-    return gulp.src(paths.images)
+    return gulp.src(paths.pictures)
         .pipe(imagemin({optimizationLevel: 5}))
         .pipe(gulp.dest('dist/pic'));
 });
