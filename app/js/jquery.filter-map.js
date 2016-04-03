@@ -16,7 +16,7 @@
             _obj = obj,
             _mapContainer = _obj.find( '.filter-map__layout' ),
             _mapData = _obj.data( 'map' ),
-            _input = _obj.find( 'input' ),
+            _inputs = _obj.find( 'input' ),
             _areas = [],
             _map;
     
@@ -26,18 +26,29 @@
                     area;
 
                 $.each( areas, function(){
+
+                    var fillOpacity = 0;
+
+                    if( _inputs.filter( '[name=' + this.value + ']' )[ 0 ].checked ){
+                        fillOpacity = 0.4;
+                    }
+
                     area = new google.maps.Polygon({
                         paths: this.coordinates,
                         strokeColor: this.color,
                         strokeOpacity: 0.8,
                         strokeWeight: 3,
                         fillColor: this.color,
-                        fillOpacity: 0
+                        fillOpacity: fillOpacity
                     });
 
                     area.setMap( _map );
 
-                    area.checked = false;
+                    if( fillOpacity ){
+                        area.checked = true;
+                    } else {
+                        area.checked = false;
+                    }
                     area.itemValue = this.value;
 
                     google.maps.event.addListener(area, "mouseover",function(){
@@ -54,27 +65,17 @@
 
                     google.maps.event.addListener(area, "click",function(){
 
-                        var value = '';
+                        var currentInput = _inputs.filter( '[name=' + this.itemValue + ']' )[ 0 ];
 
                         if( this.checked ){
+                            currentInput.checked = false;
                             this.checked = false;
                             this.setOptions( { fillOpacity: 0.2 } );
                         } else {
+                            currentInput.checked = true;
                             this.checked = true;
                             this.setOptions( { fillOpacity: 0.4 } );
                         }
-
-                        $.each( _areas, function() {
-                            if( this.checked ){
-                                value += ( ':' + this.itemValue );
-                            }
-                        } );
-
-                        if( value !='' ){
-                            value = value.substr( 1 );
-                        }
-
-                        _input.val( value );
 
                     });
 
@@ -92,7 +93,6 @@
 
             },
             _initMap = function () {
-                console.log( 1 );
                 _map = new google.maps.Map( _mapContainer[ 0 ], {
                     zoom: _mapData.zoom,
                     center: _mapData.center
