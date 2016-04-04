@@ -2,6 +2,21 @@
   position: absolute;
   top: 0;
   right: 0;
+
+  label {
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    font-size: 18px;
+    line-height: 50px;
+    color: #8e8e8e;
+    @include main-font3();
+    @include transition(color, .3, 0);
+
+    &:hover {
+      color: #c9c9c9;
+    }
+  }
 }
 
 @media (min-width: $tablet-portrait) {

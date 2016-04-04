@@ -38,6 +38,26 @@
     }
   }
 
+  &_send {
+    padding: 0 33px 0 58px;
+    background-color: $btn3-back;
+
+    &:after {
+      width: 33px;
+      height: 20px;
+      padding: 0;
+      left: 26px;
+      background: url(../img/mail-icon_white.png) no-repeat;
+      background-size: contain;
+      color: $btn3-color;
+      @include absoluteCenterY();
+      content: '';
+    }
+    &:hover {
+      background-color: $btn3-back-hover;
+    }
+  }
+
   &_2 {
     padding: 19px 10px;
     height: 50px;
