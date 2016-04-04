@@ -165,6 +165,7 @@
 
                 maxHeight = _popup.outerHeight();
                 if( maxHeight > _popup.find( 'li' ).eq( 0 ).outerHeight() * _visible ){
+
                     _popup.height( _popup.find( 'li' ).eq( 0 ).outerHeight() * _visible );
                     _scroll = _popup.niceScroll( {
                         horizrailenabled: false

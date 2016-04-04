@@ -352,6 +352,10 @@
     position: relative;
     z-index: 1;
     background: $site-content-background;
+
+    &_list {
+      padding-top: 1px;
+    }
   }
 
   &__subtitle {
@@ -513,6 +517,14 @@
       }
     }
 
+    &__content {
+
+      &_list {
+        padding-top: 1px;
+      }
+
+    }
+
   }
 }
 @media (min-width: $tablet-landscape) {
@@ -542,6 +554,14 @@
       &_2 {
         margin: 0 0 56px;
       }
+    }
+
+    &__content {
+
+      &_list {
+        padding-top: 73px;
+      }
+
     }
   }
 
@@ -708,6 +728,14 @@
         line-height: 26px;
       }
     }
+
+    //&__content {
+    //
+    //  &_list {
+    //    padding-top: 1px;
+    //  }
+    //
+    //}
   }
 }
 @media (min-width: $desktop-wide) {

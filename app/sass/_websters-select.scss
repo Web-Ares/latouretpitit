@@ -5,7 +5,7 @@
   box-sizing: border-box;
   position: relative;
   width: 180px;
-  height: 40px;
+  height: 39px;
   border: 2px solid $websters-select-border;
   background: $websters-select-back;
   @include main-font3();
@@ -20,10 +20,12 @@
 
   &__arrow{
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 20px;
+    top: 50%;
+    right: 19px;
+    //bottom: 0;
+    width: 10px;
+    height: 6px;
+    margin-top: -3px;
     transform-origin: center;
     -webkit-transition: -webkit-transform 200ms ease-in-out;
     transition: transform 200ms ease-in-out;
@@ -31,7 +33,7 @@
     &:after,
     &:before {
       position: absolute;
-      top: 9px;
+      top: 1px;
       width: 6px;
       height: 2px;
       border-radius: 2px;
@@ -40,13 +42,13 @@
     }
 
     &:after {
-      left: 4px;
+      left: 0;
       transform: rotate(45deg);
 
     }
 
     &:before {
-      right: 3px;
+      right: 0;
       transform: rotate(-45deg);
 
     }
@@ -55,8 +57,8 @@
   &__item {
     overflow: hidden;
     @include absoluteCenterY();
-    right: 20px;
-    left: 5px;
+    right: 30px;
+    left: 16px;
     padding: 1px 5px 0;
     box-sizing: border-box;
     white-space: nowrap;
@@ -100,19 +102,19 @@
     }
 
     li {
-      padding: 3px 10px;
+      padding: 6px 19px;
       white-space: nowrap;
       overflow: hidden;
+      background: transparent;
       cursor: pointer;
       color: $websters-select-item-color;
+      @include transition(background, .3,0);
 
       &:hover {
-        //color: $websters-select-popup-item-active-color;
         background: $websters-select-border;
       }
 
       &.active {
-        //color: $websters-select-popup-item-active-color !important;
         background: $websters-select-border !important;
       }
 

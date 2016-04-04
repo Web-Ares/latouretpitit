@@ -3,9 +3,9 @@
   &__aside {
     vertical-align: top;
     display: inline-block;
-    max-width: 457px;
+    width: 455px;
     padding: 52px 0 0;
-    margin-right: 26px;
+    margin-right: 28px;
 
     &-wrap {
       position: relative;
@@ -27,7 +27,7 @@
     padding: 52px 0 0;
     @include justify();
   }
-  &__form {
+  &__inner {
     padding: 0 0 140px 0;
 
     &-type {
@@ -240,51 +240,81 @@
     }
   }
 
-  .possessions {
-        &__items {
+  &__cards {
+    margin-bottom: 10px;
+    @include justify();
+
+    &-item {
+      vertical-align: top;
+      display: inline-block;
       width: 47.4%;
     }
-    &__items-wrap {
+    .card {
+      max-width: 310px;
       padding-bottom: 0;
-      margin-bottom: 36px;
-    }
-    &__pic {
-      overflow: hidden;
-      position: relative;
-      height: 239px;
-    }
-    &__pic-text {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      margin-bottom: 37px;
 
-      &:after {
+      &__pic {
+        overflow: hidden;
+        position: relative;
+        height: 239px;
+      }
+
+      &__about {
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
+        border-radius: 40px 0 0 0;
         background: rgba(199, 93, 93, .0);
-        @include transition(background, .3, 0)
-      }
-      &:hover {
+        @include transition(background, .3, 0);
 
-        &:after {
+        &:hover {
           background: rgba(199, 93, 93, .6);
+
+          .card__about-text {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+
+        &-text {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 103px;
+          left: 0;
+          padding: 28px 25px 0;
+          -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+          transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+          p {
+            font-size: 15px;
+            line-height: 22px;
+            color: #ffffff;
+          }
         }
       }
-      p {
-        font-size: 15px;
-        line-height: 22px;
-        color: #ffffff;
+
+      &__info {
+        padding: 31px 23px 18px 23px;
+
+        &-main {
+          width: 40%;
+        }
+        &-secondary {
+          width: 58%;
+        }
       }
     }
 
     .tags {
       position: absolute;
-      bottom: 0;
+      bottom: 1px;
+      padding: 0 25px 0;
     }
 
   }

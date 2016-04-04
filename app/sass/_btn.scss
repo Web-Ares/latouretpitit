@@ -39,14 +39,14 @@
   }
 
   &_send {
-    padding: 0 33px 0 58px;
+    padding: 0 28px 0 80px;
     background-color: $btn3-back;
 
     &:after {
       width: 33px;
       height: 20px;
       padding: 0;
-      left: 26px;
+      left: 29px;
       background: url(../img/mail-icon_white.png) no-repeat;
       background-size: contain;
       color: $btn3-color;
