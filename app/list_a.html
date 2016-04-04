@@ -117,7 +117,7 @@
         <!-- /site__header -->
 
         <!-- site__content -->
-        <div class="site__content">
+        <div class="site__content site__content_list">
 
             <!-- site__centered -->
             <div class="site__centered">
@@ -148,155 +148,157 @@
                     <!--range-options__aside-->
                     <aside class="range-options__aside">
 
-                        <!--range-options__form-->
-                        <form action="#" class="range-options__aside-wrap range-options__form">
+                        <form action="#">
 
-                            <!--range-options__disappear-btn-->
-                            <button class="range-options__disappear-btn">Masquer la barre de recherche</button>
-                            <!--/range-options__disappear-btn-->
+                            <!--range-options__form-->
+                            <div class="range-options__aside-wrap range-options__inner">
 
-                            <!--range-options__form-type-->
-                            <div class="range-options__form-type">
+                                <!--range-options__disappear-btn-->
+                                <button class="range-options__disappear-btn">Masquer la barre de recherche</button>
+                                <!--/range-options__disappear-btn-->
 
-                                <fieldset style="background-image: url(pic/room.jpg);">
-                                    <input id="apartment" type="checkbox">
+                                <!--range-options__inner-type-->
+                                <div class="range-options__inner-type">
 
-                                    <label for="apartment">
-                                        <span>Appartement</span>
-                                    </label>
+                                    <fieldset style="background-image: url(pic/room.jpg);">
+                                        <input id="apartment" type="checkbox">
+
+                                        <label for="apartment">
+                                            <span>Appartement</span>
+                                        </label>
+                                    </fieldset>
+
+                                    <fieldset style="background-image: url(pic/house.jpg);">
+                                        <input id="house" type="checkbox">
+
+                                        <label for="house">
+                                            <span>Maison</span>
+                                        </label>
+                                    </fieldset>
+
+                                    <fieldset style="background-image: url(pic/ground.jpg);">
+                                        <input id="ground" type="checkbox">
+
+                                        <label for="ground">
+                                            <span>Terrain</span>
+                                        </label>
+                                    </fieldset>
+
+                                    <fieldset style="background-image: url(pic/garage.jpg);">
+                                        <input id="garage" type="checkbox">
+
+                                        <label for="garage">
+                                            <span>Garage</span>
+                                        </label>
+                                    </fieldset>
+
+                                </div>
+                                <!--/range-options__inner-type-->
+
+                                <!--range-options__inner-rooms-->
+                                <div class="range-options__inner-rooms">
+
+                                    <!--range-options__inner-label-->
+                                    <span class="range-options__inner-label">Chambres</span>
+                                    <!--/range-options__inner-label-->
+
+                                    <!--range-options__inner-rooms-inner-->
+                                    <div class="range-options__inner-rooms-inner">
+
+                                        <fieldset>
+                                            <input name="rooms" id="rooms1" type="radio">
+                                            <label for="rooms1">1</label>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <input name="rooms" id="rooms2" type="radio">
+                                            <label for="rooms2">2</label>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <input name="rooms" id="rooms3" type="radio">
+                                            <label for="rooms3">3</label>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <input name="rooms" id="rooms4" type="radio">
+                                            <label for="rooms4">4+</label>
+                                        </fieldset>
+
+                                    </div>
+                                    <!--/range-options__inner-rooms-inner-->
+
+                                </div>
+                                <!--/range-options__inner-rooms-->
+
+                                <!--range-options__inner-budget-->
+                                <div class="range-options__inner-budget">
+
+                                    <!--range-options__inner-label-->
+                                    <span class="range-options__inner-label">Budget</span>
+                                    <!--/range-options__inner-label-->
+
+                                    <!--budget-slider-->
+                                    <div class="budget-slider">
+
+                                        <!--budget-slider__slider-->
+                                        <div id="budget-slider__slider" data-min="0" data-max="100000" data-default-min="25000" data-default-max="80000"></div>
+                                        <!--/budget-slider__slider-->
+
+                                    </div>
+                                    <!--/budget-slider-->
+
+                                </div>
+                                <!--/range-options__inner-budget-->
+
+                                <!--search-autocomplite-->
+                                <fieldset class="search-autocomplite">
+
+                                    <!--search-autocomplite__inner-->
+                                    <div class="search-autocomplite__inner">
+
+                                        <label for="search">Search</label>
+                                        <input id="search" type="search">
+
+                                        <!--search-autocomplite__list-btn-->
+                                        <button class="search-autocomplite__list-btn"></button>
+                                        <!--/search-autocomplite__list-btn-->
+
+                                    </div>
+                                    <!--/search-autocomplite__inner-->
+
+                                    <!--search-autocomplite__result-->
+                                    <div class="search-autocomplite__result">
+
+                                        <div>Ixelles<span class="search-autocomplite__result-close"></span></div>
+                                        <div>Auderghem<span class="search-autocomplite__result-close"></span></div>
+
+                                    </div>
+                                    <!--/search-autocomplite__result-->
+
                                 </fieldset>
+                                <!--/search-autocomplite-->
 
-                                <fieldset style="background-image: url(pic/house.jpg);">
-                                    <input id="house" type="checkbox">
+                                <!--range-options__inner-more-->
+                                <span class="range-options__inner-more">Plus de critères</span>
+                                <!--/range-options__inner-more-->
 
-                                    <label for="house">
-                                        <span>Maison</span>
-                                    </label>
-                                </fieldset>
-
-                                <fieldset style="background-image: url(pic/ground.jpg);">
-                                    <input id="ground" type="checkbox">
-
-                                    <label for="ground">
-                                        <span>Terrain</span>
-                                    </label>
-                                </fieldset>
-
-                                <fieldset style="background-image: url(pic/garage.jpg);">
-                                    <input id="garage" type="checkbox">
-
-                                    <label for="garage">
-                                        <span>Garage</span>
-                                    </label>
-                                </fieldset>
+                                <!--btn-->
+                                <button class="btn btn_3" type="submit">Recherche</button>
+                                <!--/btn-->
 
                             </div>
-                            <!--/range-options__form-type-->
+                            <!--/range-options__inner-->
 
-                            <!--range-options__form-rooms-->
-                            <div class="range-options__form-rooms">
+                            <!--range-options__map-->
+                            <div class="range-options__aside-wrap range-options__map">
 
-                                <!--range-options__form-label-->
-                                <span class="range-options__form-label">Chambres</span>
-                                <!--/range-options__form-label-->
+                                <!--range-options__disappear-btn-->
+                                <button class="range-options__disappear-btn">Masquer la map</button>
+                                <!--/range-options__disappear-btn-->
 
-                                <!--range-options__form-rooms-inner-->
-                                <div class="range-options__form-rooms-inner">
-
-                                    <fieldset>
-                                        <input name="rooms" id="rooms1" type="radio">
-                                        <label for="rooms1">1</label>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <input name="rooms" id="rooms2" type="radio">
-                                        <label for="rooms2">2</label>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <input name="rooms" id="rooms3" type="radio">
-                                        <label for="rooms3">3</label>
-                                    </fieldset>
-
-                                    <fieldset>
-                                        <input name="rooms" id="rooms4" type="radio">
-                                        <label for="rooms4">4+</label>
-                                    </fieldset>
-
-                                </div>
-                                <!--/range-options__form-rooms-inner-->
-
-                            </div>
-                            <!--/range-options__form-rooms-->
-
-                            <!--range-options__form-budget-->
-                            <div class="range-options__form-budget">
-
-                                <!--range-options__form-label-->
-                                <span class="range-options__form-label">Budget</span>
-                                <!--/range-options__form-label-->
-
-                                <!--budget-slider-->
-                                <div class="budget-slider">
-
-                                    <!--budget-slider__slider-->
-                                    <div id="budget-slider__slider" data-min="0" data-max="100000" data-default-min="25000" data-default-max="80000"></div>
-                                    <!--/budget-slider__slider-->
-
-                                </div>
-                                <!--/budget-slider-->
-
-                            </div>
-                            <!--/range-options__form-budget-->
-
-                            <!--search-autocomplite-->
-                            <fieldset class="search-autocomplite">
-
-                                <!--search-autocomplite__inner-->
-                                <div class="search-autocomplite__inner">
-
-                                    <label for="search">Search</label>
-                                    <input id="search" type="search">
-
-                                    <!--search-autocomplite__list-btn-->
-                                    <button class="search-autocomplite__list-btn"></button>
-                                    <!--/search-autocomplite__list-btn-->
-
-                                </div>
-                                <!--/search-autocomplite__inner-->
-
-                                <!--search-autocomplite__result-->
-                                <div class="search-autocomplite__result">
-
-                                    <div>Ixelles<span class="search-autocomplite__result-close"></span></div>
-                                    <div>Auderghem<span class="search-autocomplite__result-close"></span></div>
-
-                                </div>
-                                <!--/search-autocomplite__result-->
-
-                            </fieldset>
-                            <!--/search-autocomplite-->
-
-                            <!--range-options__form-more-->
-                            <span class="range-options__form-more">Plus de critères</span>
-                            <!--/range-options__form-more-->
-
-                            <!--btn-->
-                            <button class="btn btn_3" type="submit">Recherche</button>
-                            <!--/btn-->
-
-                        </form>
-                        <!--/range-options__form-->
-
-                        <!--range-options__map-->
-                        <div class="range-options__aside-wrap range-options__map">
-
-                            <!--range-options__disappear-btn-->
-                            <button class="range-options__disappear-btn">Masquer la map</button>
-                            <!--/range-options__disappear-btn-->
-
-                            <!-- filter-map -->
-                            <div class="filter-map" data-map='{
+                                <!-- filter-map -->
+                                <div class="filter-map" data-map='{
                                                             "zoom": 10,
                                                             "center": { "lat": 50.853220, "lng": 4.355132 },
                                                             "areas": [
@@ -321,21 +323,23 @@
                                                             ]
                                                         }'>
 
-                                <input type="checkbox" name="Anderlecht">
-                                <input type="checkbox" name="Oudergem" checked>
+                                    <input type="checkbox" name="Anderlecht">
+                                    <input type="checkbox" name="Oudergem" checked>
 
-                                <!-- filter-map__layout -->
-                                <div class="filter-map__layout">
+                                    <!-- filter-map__layout -->
+                                    <div class="filter-map__layout">
+
+                                    </div>
+                                    <!-- /filter-map__layout -->
 
                                 </div>
-                                <!-- /filter-map__layout -->
+                                <!-- /filter-map -->
+
 
                             </div>
-                            <!-- /filter-map -->
+                            <!--/range-options__map-->
 
-
-                        </div>
-                        <!--/range-options__map-->
+                        </form>
 
                     </aside>
                     <!--/range-options__aside-->
@@ -343,127 +347,494 @@
                     <!--range-options__content-->
                     <div class="range-options__content">
 
-                        <!-- possessions -->
-                        <div class="possessions">
+                        <!--range-options__cards-->
+                        <ul class="range-options__cards">
 
-                            <!-- possessions__items -->
-                            <div class="possessions__items">
+                            <!--range-options__cards-item-->
+                            <li class="range-options__cards-item">
 
-                                <!-- possessions__items-wrap -->
-                                <div class="possessions__items-wrap">
+                                <!-- card -->
+                                <div class="card">
 
-                                    <!-- possessions__pic -->
-                                    <div class="possessions__pic">
-                                        <img src="pic/possesson1.jpg" width="360" height="241" alt="">
+                                    <!-- card__pic -->
+                                    <div class="card__pic">
+                                        <img src="pic/card-pic_1.jpg" alt="room-pic">
 
-                                        <!--tags__text-->
-                                        <div class="possessions__pic-text">
-                                            A quelques pas de la place Dumon, quartier “Stockel”, superbe
-                                            appartement meublé de plus ou moins 110m.
-                                        </div>
-                                        <!--/tags__text-->
+                                        <!--card__about-->
+                                        <div class="card__about">
 
-                                        <!-- tags -->
-                                        <div class="tags">
+                                            <!--card__about-text-->
+                                            <div class="card__about-text">
 
-                                            <!-- tags__icon -->
-                                            <div class="tags__icon tags__icon_surface">
-                                                110 m²
+                                                <p>
+                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe appartement meublé de plus ou moins 110m.
+                                                </p>
+
                                             </div>
-                                            <!-- /tags__icon -->
-
-                                            <!-- tags__icon -->
-                                            <div class="tags__icon tags__icon_chambers">
-                                                2
-                                            </div>
-                                            <!-- /tags__icon -->
-
-                                            <!-- tags__icon -->
-                                            <div class="tags__icon tags__icon_shower">
-                                                1
-                                            </div>
-                                            <!-- /tags__icon -->
-
-                                            <!-- tags__icon -->
-                                            <div class="tags__icon tags__icon_parking">
-                                                1
-                                            </div>
-                                            <!-- /tags__icon -->
-
-                                            <!-- tags__icon -->
-                                            <div class="tags__icon tags__icon_peb-c">
-                                                PEB
-                                            </div>
-                                            <!-- /tags__icon -->
-
-                                        </div>
-                                        <!-- /tags -->
-
-                                    </div>
-                                    <!-- /possessions__pic -->
-
-                                    <!-- possessions__info -->
-                                    <div class="possessions__info">
-
-                                        <!-- possessions__info-main -->
-                                        <div class="possessions__info-main">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-type">À louer</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-price -->
-                                            <span class="possessions__info-price">1.500 € </span>
-                                            <!-- /possessions__info-price -->
-
-                                        </div>
-                                        <!-- /possessions__info-main -->
-
-                                        <!-- possessions__info-secondary -->
-                                        <div class="possessions__info-secondary">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-variation">Appartement</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-location -->
-                                            <span class="possessions__info-location">à Woluwe-Saint-Pierre</span>
-                                            <!-- /possessions__info-location -->
-
-                                        </div>
-                                        <!-- /possessions__info-secondary -->
-
-                                    </div>
-                                    <!-- /possessions__info -->
-
-                                </div>
-                                <!-- /possessions__items-wrap -->
-
-                            </div>
-                            <!-- /possessions__items -->
-
-                            <!-- possessions__items -->
-                            <div class="possessions__items">
-
-                                <!-- possessions__items-wrap -->
-                                <div class="possessions__items-wrap">
-
-                                    <!-- possessions__pic -->
-                                    <div class="possessions__pic">
-                                        <img src="pic/possesson1.jpg" width="360" height="241" alt="">
-
-                                        <!-- possessions__info-tags -->
-                                        <div class="possessions__info-tags">
+                                            <!--/card__about-text-->
 
                                             <!-- tags -->
                                             <div class="tags">
 
-                                                <!--tags__text-->
-                                                <div class="tags__text">
-                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe
-                                                    appartement meublé de plus ou moins 110m.
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_surface">
+                                                    110 m²
                                                 </div>
-                                                <!--/tags__text-->
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_chambers">
+                                                    2
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_shower">
+                                                    1
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                            </div>
+                                            <!-- /tags -->
+
+                                        </div>
+                                        <!--/card__about-->
+                                    </div>
+                                    <!-- /card__pic -->
+
+                                    <!-- card__info -->
+                                    <div class="card__info">
+
+                                        <!-- card__info-main -->
+                                        <div class="card__info-main">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-type">À louer</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-price -->
+                                            <span class="card__info-price">1.500 € </span>
+                                            <!-- /card__info-price -->
+
+                                        </div>
+                                        <!-- /card__info-main -->
+
+                                        <!-- card__info-secondary -->
+                                        <div class="card__info-secondary">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-variation">Appartement</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-location -->
+                                            <span class="card__info-location">à Woluwe-Saint-Pierre</span>
+                                            <!-- /card__info-location -->
+
+                                        </div>
+                                        <!-- /card__info-secondary -->
+
+                                    </div>
+                                    <!-- /card__info -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </li>
+                            <!--/range-options__cards-item-->
+
+                            <!--range-options__cards-item-->
+                            <li class="range-options__cards-item">
+
+                                <!-- card -->
+                                <div class="card">
+
+                                    <!-- card__pic -->
+                                    <div class="card__pic">
+                                        <img src="pic/card-pic_1.jpg" alt="room-pic">
+
+                                        <!--card__about-->
+                                        <div class="card__about">
+
+                                            <!--card__about-text-->
+                                            <div class="card__about-text">
+
+                                                <p>
+                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe appartement meublé de plus ou moins 110m.
+                                                </p>
+
+                                            </div>
+                                            <!--/card__about-text-->
+
+                                            <!-- tags -->
+                                            <div class="tags">
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_surface">
+                                                    110 m²
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_chambers">
+                                                    2
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_shower">
+                                                    1
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                            </div>
+                                            <!-- /tags -->
+
+                                        </div>
+                                        <!--/card__about-->
+                                    </div>
+                                    <!-- /card__pic -->
+
+                                    <!-- card__info -->
+                                    <div class="card__info">
+
+                                        <!-- card__info-main -->
+                                        <div class="card__info-main">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-type">À louer</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-price -->
+                                            <span class="card__info-price">1.500 € </span>
+                                            <!-- /card__info-price -->
+
+                                        </div>
+                                        <!-- /card__info-main -->
+
+                                        <!-- card__info-secondary -->
+                                        <div class="card__info-secondary">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-variation">Appartement</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-location -->
+                                            <span class="card__info-location">à Woluwe-Saint-Pierre</span>
+                                            <!-- /card__info-location -->
+
+                                        </div>
+                                        <!-- /card__info-secondary -->
+
+                                    </div>
+                                    <!-- /card__info -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </li>
+                            <!--/range-options__cards-item-->
+
+                            <!--range-options__cards-item-->
+                            <li class="range-options__cards-item">
+
+                                <!-- card -->
+                                <div class="card">
+
+                                    <!-- card__pic -->
+                                    <div class="card__pic">
+                                        <img src="pic/card-pic_1.jpg" alt="room-pic">
+
+                                        <!--card__about-->
+                                        <div class="card__about">
+
+                                            <!--card__about-text-->
+                                            <div class="card__about-text">
+
+                                                <p>
+                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe appartement meublé de plus ou moins 110m.
+                                                </p>
+
+                                            </div>
+                                            <!--/card__about-text-->
+
+                                            <!-- tags -->
+                                            <div class="tags">
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_surface">
+                                                    110 m²
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_chambers">
+                                                    2
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_shower">
+                                                    1
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                            </div>
+                                            <!-- /tags -->
+
+                                        </div>
+                                        <!--/card__about-->
+                                    </div>
+                                    <!-- /card__pic -->
+
+                                    <!-- card__info -->
+                                    <div class="card__info">
+
+                                        <!-- card__info-main -->
+                                        <div class="card__info-main">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-type">À louer</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-price -->
+                                            <span class="card__info-price">1.500 € </span>
+                                            <!-- /card__info-price -->
+
+                                        </div>
+                                        <!-- /card__info-main -->
+
+                                        <!-- card__info-secondary -->
+                                        <div class="card__info-secondary">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-variation">Appartement</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-location -->
+                                            <span class="card__info-location">à Woluwe-Saint-Pierre</span>
+                                            <!-- /card__info-location -->
+
+                                        </div>
+                                        <!-- /card__info-secondary -->
+
+                                    </div>
+                                    <!-- /card__info -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </li>
+                            <!--/range-options__cards-item-->
+
+                            <!--range-options__cards-item-->
+                            <li class="range-options__cards-item">
+
+                                <!-- card -->
+                                <div class="card">
+
+                                    <!-- card__pic -->
+                                    <div class="card__pic">
+                                        <img src="pic/card-pic_1.jpg" alt="room-pic">
+
+                                        <!--card__about-->
+                                        <div class="card__about">
+
+                                            <!--card__about-text-->
+                                            <div class="card__about-text">
+
+                                                <p>
+                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe appartement meublé de plus ou moins 110m.
+                                                </p>
+
+                                            </div>
+                                            <!--/card__about-text-->
+
+                                            <!-- tags -->
+                                            <div class="tags">
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_surface">
+                                                    110 m²
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_chambers">
+                                                    2
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_shower">
+                                                    1
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                            </div>
+                                            <!-- /tags -->
+
+                                        </div>
+                                        <!--/card__about-->
+                                    </div>
+                                    <!-- /card__pic -->
+
+                                    <!-- card__info -->
+                                    <div class="card__info">
+
+                                        <!-- card__info-main -->
+                                        <div class="card__info-main">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-type">À louer</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-price -->
+                                            <span class="card__info-price">1.500 € </span>
+                                            <!-- /card__info-price -->
+
+                                        </div>
+                                        <!-- /card__info-main -->
+
+                                        <!-- card__info-secondary -->
+                                        <div class="card__info-secondary">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-variation">Appartement</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-location -->
+                                            <span class="card__info-location">à Woluwe-Saint-Pierre</span>
+                                            <!-- /card__info-location -->
+
+                                        </div>
+                                        <!-- /card__info-secondary -->
+
+                                    </div>
+                                    <!-- /card__info -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </li>
+                            <!--/range-options__cards-item-->
+
+                            <!--range-options__cards-item-->
+                            <li class="range-options__cards-item">
+
+                                <!-- card -->
+                                <div class="card">
+
+                                    <!-- card__pic -->
+                                    <div class="card__pic">
+                                        <img src="pic/card-pic_1.jpg" alt="room-pic">
+
+                                        <!--card__about-->
+                                        <div class="card__about">
+
+                                            <!--card__about-text-->
+                                            <div class="card__about-text">
+
+                                                <p>
+                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe appartement meublé de plus ou moins 110m.
+                                                </p>
+
+                                            </div>
+                                            <!--/card__about-text-->
+
+                                            <!-- tags -->
+                                            <div class="tags">
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_surface">
+                                                    110 m²
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_chambers">
+                                                    2
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                                <!-- tags__icon -->
+                                                <div class="tags__icon tags__icon_shower">
+                                                    1
+                                                </div>
+                                                <!-- /tags__icon -->
+
+                                            </div>
+                                            <!-- /tags -->
+
+                                        </div>
+                                        <!--/card__about-->
+                                    </div>
+                                    <!-- /card__pic -->
+
+                                    <!-- card__info -->
+                                    <div class="card__info">
+
+                                        <!-- card__info-main -->
+                                        <div class="card__info-main">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-type">À louer</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-price -->
+                                            <span class="card__info-price">1.500 € </span>
+                                            <!-- /card__info-price -->
+
+                                        </div>
+                                        <!-- /card__info-main -->
+
+                                        <!-- card__info-secondary -->
+                                        <div class="card__info-secondary">
+
+                                            <!-- card__info-type -->
+                                            <span class="card__info-variation">Appartement</span>
+                                            <!-- /card__info-type -->
+
+                                            <!-- card__info-location -->
+                                            <span class="card__info-location">à Woluwe-Saint-Pierre</span>
+                                            <!-- /card__info-location -->
+
+                                        </div>
+                                        <!-- /card__info-secondary -->
+
+                                    </div>
+                                    <!-- /card__info -->
+
+                                </div>
+                                <!-- /card -->
+
+                            </li>
+                            <!--/range-options__cards-item-->
+
+                            <!--range-options__cards-item-->
+                            <li class="range-options__cards-item">
+
+                                <!-- card -->
+                                <div class="card">
+
+                                    <!-- card__pic -->
+                                    <div class="card__pic">
+                                        <img src="pic/card-pic_1.jpg" alt="room-pic">
+
+                                        <!--card__about-->
+                                        <div class="card__about">
+
+                                            <!--card__about-text-->
+                                            <div class="card__about-text">
+
+                                                <p>
+                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe appartement meublé de plus ou moins 110m.
+                                                </p>
+
+                                            </div>
+                                            <!--/card__about-text-->
+
+                                            <!-- tags -->
+                                            <div class="tags">
 
                                                 <!-- tags__icon -->
                                                 <div class="tags__icon tags__icon_surface">
@@ -499,355 +870,52 @@
                                             <!-- /tags -->
 
                                         </div>
-                                        <!-- /possessions__info-tags -->
+                                        <!--/card__about-->
                                     </div>
-                                    <!-- /possessions__pic -->
+                                    <!-- /card__pic -->
 
-                                    <!-- possessions__info -->
-                                    <div class="possessions__info">
+                                    <!-- card__info -->
+                                    <div class="card__info">
 
-                                        <!-- possessions__info-main -->
-                                        <div class="possessions__info-main">
+                                        <!-- card__info-main -->
+                                        <div class="card__info-main">
 
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-type">À louer</span>
-                                            <!-- /possessions__info-type -->
+                                            <!-- card__info-type -->
+                                            <span class="card__info-type">À louer</span>
+                                            <!-- /card__info-type -->
 
-                                            <!-- possessions__info-price -->
-                                            <span class="possessions__info-price">1.500 € </span>
-                                            <!-- /possessions__info-price -->
+                                            <!-- card__info-price -->
+                                            <span class="card__info-price">1.500 € </span>
+                                            <!-- /card__info-price -->
 
                                         </div>
-                                        <!-- /possessions__info-main -->
+                                        <!-- /card__info-main -->
 
-                                        <!-- possessions__info-secondary -->
-                                        <div class="possessions__info-secondary">
+                                        <!-- card__info-secondary -->
+                                        <div class="card__info-secondary">
 
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-variation">Appartement</span>
-                                            <!-- /possessions__info-type -->
+                                            <!-- card__info-type -->
+                                            <span class="card__info-variation">Appartement</span>
+                                            <!-- /card__info-type -->
 
-                                            <!-- possessions__info-location -->
-                                            <span class="possessions__info-location">à Woluwe-Saint-Pierre</span>
-                                            <!-- /possessions__info-location -->
+                                            <!-- card__info-location -->
+                                            <span class="card__info-location">à Woluwe-Saint-Pierre</span>
+                                            <!-- /card__info-location -->
 
                                         </div>
-                                        <!-- /possessions__info-secondary -->
+                                        <!-- /card__info-secondary -->
 
                                     </div>
-                                    <!-- /possessions__info -->
+                                    <!-- /card__info -->
 
                                 </div>
-                                <!-- /possessions__items-wrap -->
+                                <!-- /card -->
 
-                            </div>
-                            <!-- /possessions__items -->
+                            </li>
+                            <!--/range-options__cards-item-->
 
-                            <!-- possessions__items -->
-                            <div class="possessions__items">
-
-                                <!-- possessions__items-wrap -->
-                                <div class="possessions__items-wrap">
-
-                                    <!-- possessions__pic -->
-                                    <div class="possessions__pic">
-                                        <img src="pic/possesson1.jpg" width="360" height="241" alt="">
-
-                                        <!-- possessions__info-tags -->
-                                        <div class="possessions__info-tags">
-
-                                            <!-- tags -->
-                                            <div class="tags">
-
-                                                <!--tags__text-->
-                                                <div class="tags__text">
-                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe
-                                                    appartement meublé de plus ou moins 110m.
-                                                </div>
-                                                <!--/tags__text-->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_surface">
-                                                    110 m²
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_chambers">
-                                                    2
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_shower">
-                                                    1
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_parking">
-                                                    1
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_peb-c">
-                                                    PEB
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                            </div>
-                                            <!-- /tags -->
-
-                                        </div>
-                                        <!-- /possessions__info-tags -->
-                                    </div>
-                                    <!-- /possessions__pic -->
-
-                                    <!-- possessions__info -->
-                                    <div class="possessions__info">
-
-                                        <!-- possessions__info-main -->
-                                        <div class="possessions__info-main">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-type">À louer</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-price -->
-                                            <span class="possessions__info-price">1.500 € </span>
-                                            <!-- /possessions__info-price -->
-
-                                        </div>
-                                        <!-- /possessions__info-main -->
-
-                                        <!-- possessions__info-secondary -->
-                                        <div class="possessions__info-secondary">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-variation">Appartement</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-location -->
-                                            <span class="possessions__info-location">à Woluwe-Saint-Pierre</span>
-                                            <!-- /possessions__info-location -->
-
-                                        </div>
-                                        <!-- /possessions__info-secondary -->
-
-                                    </div>
-                                    <!-- /possessions__info -->
-
-                                </div>
-                                <!-- /possessions__items-wrap -->
-
-                            </div>
-                            <!-- /possessions__items -->
-
-                            <!-- possessions__items -->
-                            <div class="possessions__items">
-
-                                <!-- possessions__items-wrap -->
-                                <div class="possessions__items-wrap">
-
-                                    <!-- possessions__pic -->
-                                    <div class="possessions__pic">
-                                        <img src="pic/possesson1.jpg" width="360" height="241" alt="">
-
-                                        <!-- possessions__info-tags -->
-                                        <div class="possessions__info-tags">
-
-                                            <!-- tags -->
-                                            <div class="tags">
-
-                                                <!--tags__text-->
-                                                <div class="tags__text">
-                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe
-                                                    appartement meublé de plus ou moins 110m.
-                                                </div>
-                                                <!--/tags__text-->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_surface">
-                                                    110 m²
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_chambers">
-                                                    2
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_shower">
-                                                    1
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_parking">
-                                                    1
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_peb-c">
-                                                    PEB
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                            </div>
-                                            <!-- /tags -->
-
-                                        </div>
-                                        <!-- /possessions__info-tags -->
-                                    </div>
-                                    <!-- /possessions__pic -->
-
-                                    <!-- possessions__info -->
-                                    <div class="possessions__info">
-
-                                        <!-- possessions__info-main -->
-                                        <div class="possessions__info-main">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-type">À louer</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-price -->
-                                            <span class="possessions__info-price">1.500 € </span>
-                                            <!-- /possessions__info-price -->
-
-                                        </div>
-                                        <!-- /possessions__info-main -->
-
-                                        <!-- possessions__info-secondary -->
-                                        <div class="possessions__info-secondary">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-variation">Appartement</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-location -->
-                                            <span class="possessions__info-location">à Woluwe-Saint-Pierre</span>
-                                            <!-- /possessions__info-location -->
-
-                                        </div>
-                                        <!-- /possessions__info-secondary -->
-
-                                    </div>
-                                    <!-- /possessions__info -->
-
-                                </div>
-                                <!-- /possessions__items-wrap -->
-
-                            </div>
-                            <!-- /possessions__items -->
-
-                            <!-- possessions__items -->
-                            <div class="possessions__items">
-
-                                <!-- possessions__items-wrap -->
-                                <div class="possessions__items-wrap">
-
-                                    <!-- possessions__pic -->
-                                    <div class="possessions__pic">
-                                        <img src="pic/possesson1.jpg" width="360" height="241" alt="">
-
-                                        <!-- possessions__info-tags -->
-                                        <div class="possessions__info-tags">
-
-                                            <!-- tags -->
-                                            <div class="tags">
-
-                                                <!--tags__text-->
-                                                <div class="tags__text">
-                                                    A quelques pas de la place Dumon, quartier “Stockel”, superbe
-                                                    appartement meublé de plus ou moins 110m.
-                                                </div>
-                                                <!--/tags__text-->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_surface">
-                                                    110 m²
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_chambers">
-                                                    2
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_shower">
-                                                    1
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_parking">
-                                                    1
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                                <!-- tags__icon -->
-                                                <div class="tags__icon tags__icon_peb-c">
-                                                    PEB
-                                                </div>
-                                                <!-- /tags__icon -->
-
-                                            </div>
-                                            <!-- /tags -->
-
-                                        </div>
-                                        <!-- /possessions__info-tags -->
-                                    </div>
-                                    <!-- /possessions__pic -->
-
-                                    <!-- possessions__info -->
-                                    <div class="possessions__info">
-
-                                        <!-- possessions__info-main -->
-                                        <div class="possessions__info-main">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-type">À louer</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-price -->
-                                            <span class="possessions__info-price">1.500 € </span>
-                                            <!-- /possessions__info-price -->
-
-                                        </div>
-                                        <!-- /possessions__info-main -->
-
-                                        <!-- possessions__info-secondary -->
-                                        <div class="possessions__info-secondary">
-
-                                            <!-- possessions__info-type -->
-                                            <span class="possessions__info-variation">Appartement</span>
-                                            <!-- /possessions__info-type -->
-
-                                            <!-- possessions__info-location -->
-                                            <span class="possessions__info-location">à Woluwe-Saint-Pierre</span>
-                                            <!-- /possessions__info-location -->
-
-                                        </div>
-                                        <!-- /possessions__info-secondary -->
-
-                                    </div>
-                                    <!-- /possessions__info -->
-
-                                </div>
-                                <!-- /possessions__items-wrap -->
-
-                            </div>
-                            <!-- /possessions__items -->
-
-                        </div>
-                        <!-- /possessions -->
+                        </ul>
+                        <!--/range-options__cards-->
 
                         <!--pagination-->
                         <ul class="pagination">

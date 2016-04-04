@@ -1,14 +1,15 @@
 .sort {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -2px;
+  right: 16px;
 
   label {
     vertical-align: middle;
     display: inline-block;
     position: relative;
+    margin-right: 13px;
     font-size: 18px;
-    line-height: 50px;
+    line-height: 51px;
     color: #8e8e8e;
     @include main-font3();
     @include transition(color, .3, 0);

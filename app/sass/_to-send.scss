@@ -3,9 +3,11 @@
   width: 100%;
   min-height: 210px;
   margin-top: 20px;
+  padding: 25px 19px 12px 30px;;
   background-size: cover;
   background-position: center;
   @include main-font3();
+  text-align: left;
   color: #fff;
   
   &:before {
@@ -18,21 +20,32 @@
   }
 
   &__title {
+    display: block;
+    width: 57%;
+    margin-bottom: 45px;
     font-size: 16px;
     line-height: 28px;
 
     strong {
+      font-size: 19px;
+      line-height: 28px;
+      letter-spacing: 0.6px;
       @include main-font6();
     }
   }
   &__form {
+    padding: 0 0 0 2px;
+    @include justify();
 
     input {
+      width: 390px;
+      //margin-bottom: 19px;
       border: none;
       border-bottom: 2px solid #fff;
       background: transparent;
-      font-size: 25px;
-      line-height: 30px;
+      font-size: 17px;
+      line-height: 32px;
+      letter-spacing: 0.5px;
       color: #fff;
 
       &::-webkit-input-placeholder {
@@ -47,7 +60,12 @@
 
     }
     .btn {
-
+      position: relative;
+      top: -11px;
+      //
+      //&:after {
+      //  left: 29px;
+      //}
     }
   }
 

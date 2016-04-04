@@ -1,4 +1,5 @@
 .pagination {
+  margin-bottom: 54px;
   @include justify();
 
   &__item {
@@ -10,36 +11,52 @@
     @include main-font3();
   }
 
-
   &__prev,
   &__next {
     position: relative;
+    top: 3px;
     color: #c75d5d;
 
     &:before {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 4px;
+      left: 3px;
       width: 16px;
       height: 8px;
       background: url(../img/red-arrow.png) no-repeat;
       background-size: contain;
+      @include transition(left, .3, 0);
       content: '';
     }
   }
 
   &__prev {
     padding-left: 30px;
+
+    &:hover {
+
+      &:before {
+        left: 0;
+      }
+    }
   }
   &__next {
     padding-left: 0;
-    padding-right: 30px;
+    padding-right: 27px;
 
     &:before {
-      right: 0;
+      right: -2px;
       left: auto;
       -webkit-transform: rotate(180deg);
       transform: rotate(180deg);
+      @include transition(right, .3, 0);
+    }
+
+    &:hover {
+
+      &:before {
+        right: -5px;
+      }
     }
   }
 
