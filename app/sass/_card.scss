@@ -26,7 +26,46 @@
       height: auto;
 
     }
+  }
 
+  &__about {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 40px 0 0 0;
+    background: $card-about-back;
+    @include transition(background, .3, 0);
+
+    &:hover {
+      background: $card-about-hover;
+
+      .card__about-text {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &-text {
+      visibility: hidden;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 103px;
+      left: 0;
+      padding: 28px 25px 0;
+      -webkit-transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+      transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+      p {
+        font-size: 15px;
+        line-height: 22px;
+        color: $card-about-text-color;
+      }
+    }
   }
 
   &__info {

@@ -166,9 +166,49 @@ $possessions-wrap-color: #000000;
 $possessions-wrap-box-shadow: rgba(0,0,0,0.4);
 $possessions-tags-border-color: #e9e9e9;
 $possessions-view-color: #c75d5d;
+$card-about-text-color: #fff;
+$card-about-back: rgba(199, 93, 93, .0);
+$card-about-hover: rgba(199, 93, 93, .6);
 /*---------- /possessions ---------*/
 
 /*---------- tags ---------*/
 $tags-icon-back: #f2f3f5;
 $tags-icon-color: #8b8b8b;
 /*---------- /tags ---------*/
+
+/*---------- range-options ---------*/
+$range-options-back: #fff;
+$range-options-type-hover: rgba(245, 83, 83, .6);
+$range-options-type-color: #fff;
+$range-options-label: #2e2e2e;
+$range-options-rooms-back: #fff;
+$range-options-rooms-border: #ececee;
+$range-options-rooms-uncheck: #f5f6fa;
+$range-options-rooms-uncheck-color: #060606;
+$range-options-rooms-uncheck-hover: #e5e7eb;
+$range-options-rooms-check-color: #fff;
+$range-options-rooms-check: #c75d5d;
+$range-options-more-color: #2a2a2a;
+$range-options-more-hover: #cecece;
+$range-options-disappear-color: #838383;
+$range-options-disappear-hover: #ababab;
+/*---------- /range-options ---------*/
+
+/*---------- search-autocomplite ---------*/
+$search-autocomplite-color: #232323;
+$search-autocomplite-border: #cdcdcd;
+$search-autocomplite-btn: #f5f6fa;
+$search-autocomplite-btn-hover: #e8e9ea;
+$search-autocomplite-result-back: #f2f2f4;
+$search-autocomplite-result-color: #2a2a2a;
+/*---------- /search-autocomplite ---------*/
+
+/*---------- to-send ---------*/
+$to-send-color: #fff;
+$to-send-line-back: #e1e2e3;
+/*---------- /to-send ---------*/
+
+/*---------- pagination ---------*/
+$pagination-color: #b2b2b2;
+$pagination-prev-next-color: #c75d5d;
+/*---------- /pagination ---------*/

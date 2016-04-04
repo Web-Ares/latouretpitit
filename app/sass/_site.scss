@@ -354,7 +354,7 @@
     background: $site-content-background;
 
     &_list {
-      padding-top: 1px;
+      padding-top: 20px;
     }
   }
 
@@ -516,15 +516,6 @@
         padding: 0 5px 0 0;
       }
     }
-
-    &__content {
-
-      &_list {
-        padding-top: 1px;
-      }
-
-    }
-
   }
 }
 @media (min-width: $tablet-landscape) {
@@ -728,14 +719,6 @@
         line-height: 26px;
       }
     }
-
-    //&__content {
-    //
-    //  &_list {
-    //    padding-top: 1px;
-    //  }
-    //
-    //}
   }
 }
 @media (min-width: $desktop-wide) {

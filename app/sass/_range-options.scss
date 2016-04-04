@@ -1,18 +1,14 @@
 .range-options {
 
   &__aside {
-    vertical-align: top;
-    display: inline-block;
-    width: 455px;
     padding: 52px 0 0;
-    margin-right: 28px;
 
     &-wrap {
       position: relative;
       margin-bottom: 59px;
       border-radius: 4px;
       box-shadow: 1px 1.732px 2px 0 rgba( 0, 0, 0, .2);
-      background: #fff;
+      background: $range-options-back;
 
       &:last-child {
         margin-bottom: 0;
@@ -22,13 +18,12 @@
   &__content {
     vertical-align: top;
     display: inline-block;
-    width: 652px;
     margin: 0;
     padding: 52px 0 0;
     @include justify();
   }
   &__inner {
-    padding: 0 0 140px 0;
+    padding-bottom: 20px;
 
     &-type {
       @include justify();
@@ -40,8 +35,8 @@
         vertical-align: top;
         display: inline-block;
         position: relative;
-        width: 49.5%;
-        margin-bottom: 1%;
+        width: 49%;
+        margin-bottom: 2%;
         height: 92px;
         border-radius: 2px;
         background-size: 150% ;
@@ -55,12 +50,12 @@
           @include main-font2();
 
           &:after {
-            background: rgba(245, 83, 83, .6);
+            background: $range-options-type-hover;
           }
           &:hover {
 
             &:after {
-              background: rgba(245, 83, 83, .6);
+              background: $range-options-type-hover;
             }
           }
         }
@@ -70,7 +65,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          color: #fff;
+          color: $range-options-type-color;
           font-size: 18px;
           line-height: 92px;
           text-align: center;
@@ -103,13 +98,14 @@
     &-label {
       vertical-align: middle;
       display: inline-block;
+      margin-bottom: 10px;
       @include main-font2();
       font-size: 18px;
-      color: #2e2e2e;
+      color: $range-options-label;
     }
     &-rooms {
       @include justify();
-      padding: 0 31px 0 36px;
+      padding: 0 15px;
       margin-bottom: 38px;
 
       &-inner {
@@ -117,7 +113,7 @@
         vertical-align: middle;
         display: inline-block;
         border-radius: 2px;
-        background-color: #fff;
+        background-color: $range-options-rooms-back;
         box-shadow: 1px 1.732px 2px 0 rgba( 0, 0, 0, .1);
 
         fieldset {
@@ -126,8 +122,7 @@
           width: 64px;
           height: 43px;
           border-radius: 2px;
-          border-left: 1px solid #ececee;
-          //margin-right: -4px;
+          border-left: 1px solid $range-options-rooms-border;
 
           &:first-child {
             border-left: none;
@@ -138,11 +133,11 @@
             visibility: hidden;
           }
           input:checked + label {
-            color: #fff;
-            background: #c75d5d;
+            color: $range-options-rooms-check-color;
+            background: $range-options-rooms-check;
 
             &:hover {
-              background: #c75d5d;
+              background: $range-options-rooms-check;
             }
           }
           label {
@@ -151,22 +146,22 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background: #f5f6fa;
-            color: #060606;
+            background: $range-options-rooms-uncheck;
+            color: $range-options-rooms-uncheck-color;
             font-size: 15px;
             line-height: 45px;
             text-align: center;
             transition: background .3s ease-in-out, color .3s ease-in-out;
 
             &:hover {
-              background: #e5e7eb;
+              background: $range-options-rooms-uncheck-hover;
             }
           }
         }
       }
     }
     &-budget {
-      padding: 0 36px 0 36px;
+      padding: 0 15px;
       margin-bottom: 70px;
 
       .range-options__inner-label {
@@ -174,12 +169,13 @@
       }
     }
     &-more {
-      position: absolute;
-      left: 38px;
-      bottom: 22px;
+      display: inline-block;
+      position: relative;
+      left: 15px;
+      margin-bottom: 20px;
       padding-left: 42px;
       font-size: 16px;
-      color: #2a2a2a;
+      color: $range-options-more-color;
       cursor: pointer;
       @include main-font3();
       @include transition(color, .3, 0);
@@ -195,16 +191,15 @@
         content: '';
       }
       &:hover {
-        color: #cecece;
+        color: $range-options-more-hover;
       }
     }
     .btn_3 {
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      display: block;
       width: 195px;
       height: 54px;
       padding: 3px 0 0 27px;
+      margin: 0 auto;
     }
   }
   &__disappear-btn {
@@ -215,7 +210,7 @@
     background: transparent;
     border: none;
     font-size: 15px;
-    color: #838383;
+    color: $range-options-disappear-color;
     @include main-font3();
     @include transition(color, .3, 0);
 
@@ -232,7 +227,7 @@
     }
 
     &:hover {
-      color: #ababab;
+      color: $range-options-disappear-hover;
 
       &:after {
         opacity: .8;
@@ -245,12 +240,11 @@
     @include justify();
 
     &-item {
-      vertical-align: top;
-      display: inline-block;
-      width: 47.4%;
+      display: block;
+      text-align: center;
     }
     .card {
-      max-width: 310px;
+      max-width: 290px;
       padding-bottom: 0;
       margin-bottom: 37px;
 
@@ -258,6 +252,10 @@
         overflow: hidden;
         position: relative;
         height: 239px;
+
+        img {
+          height: 100%;
+        }
       }
 
       &__about {
@@ -267,11 +265,11 @@
         bottom: 0;
         left: 0;
         border-radius: 40px 0 0 0;
-        background: rgba(199, 93, 93, .0);
+        background: $card-about-back;
         @include transition(background, .3, 0);
 
         &:hover {
-          background: rgba(199, 93, 93, .6);
+          background: $card-about-hover;
 
           .card__about-text {
             visibility: visible;
@@ -282,6 +280,7 @@
         &-text {
           visibility: hidden;
           opacity: 0;
+          overflow: hidden;
           position: absolute;
           top: 0;
           right: 0;
@@ -294,7 +293,7 @@
           p {
             font-size: 15px;
             line-height: 22px;
-            color: #ffffff;
+            color: $card-about-text-color;
           }
         }
       }
@@ -316,24 +315,163 @@
       bottom: 1px;
       padding: 0 25px 0;
     }
-
   }
 }
 
 @media (min-width: $tablet-portrait) {
   .range-options {
 
+    &__inner {
+      padding: 0 0 140px 0;
+
+      &-type {
+
+        fieldset {
+          width: 49.5%;
+          margin-bottom: 1%;
+          height: 130px;
+
+          label {
+            line-height: 130px;
+          }
+        }
+      }
+      &-label {
+        margin-bottom: 0;
+      }
+      &-rooms {
+        padding: 0 31px 0 36px;
+      }
+      &-budget {
+        padding: 0 36px 0 36px;
+      }
+      &-more {
+        position: absolute;
+        left: 38px;
+        bottom: 0;
+      }
+      .btn_3 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    &__cards {
+
+      &-item {
+        vertical-align: top;
+        display: inline-block;
+        width: 47.4%;
+        text-align: center;
+      }
+      .card {
+        max-width: 310px;
+      }
+    }
   }
 }
 
 @media (min-width: $tablet-landscape) {
   .range-options {
+    margin-bottom: 140px;
 
+    &__aside {
+      vertical-align: top;
+      display: inline-block;
+      width: 35%;
+      margin-right: 3%;
+    }
+    &__content {
+      padding: 52px 0 0;
+      width: 60%;
+    }
+    &__inner {
+      padding-bottom: 20px;
+
+      &-type {
+
+        fieldset {
+          width: 49%;
+          margin-bottom: 2%;
+          height: 92px;
+
+          label {
+            line-height: 92px;
+          }
+        }
+      }
+      &-label {
+        margin-bottom: 10px;
+      }
+      &-rooms {
+        padding: 0 15px;
+      }
+      &-budget {
+        padding: 0 15px;
+        margin-bottom: 70px;
+
+        .range-options__inner-label {
+          margin-bottom: 31px;
+        }
+      }
+      &-more {
+        position: relative;
+        left: 15px;
+        bottom: 0;
+      }
+      .btn_3 {
+        position: relative;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
 @media (min-width: $desktop) {
   .range-options {
 
+    &__aside {
+      width: 455px;
+      margin-right: 28px;
+    }
+    &__content {
+      width: 652px;
+    }
+    &__inner {
+      padding: 0 0 140px 0;
+
+      &-type {
+
+        fieldset {
+          width: 49.5%;
+          margin-bottom: 1%;
+        }
+      }
+      &-label {
+        margin-bottom: 0;
+      }
+      &-rooms {
+        padding: 0 31px 0 36px;
+      }
+      &-budget {
+        padding: 0 36px 0 36px;
+      }
+      &-more {
+        position: absolute;
+        left: 38px;
+      }
+      .btn_3 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    &__cards {
+
+      &-item {
+        text-align: left;
+      }
+    }
   }
 }

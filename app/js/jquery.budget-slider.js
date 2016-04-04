@@ -23,8 +23,6 @@
             _nod = document.createTextNode(String.fromCharCode(8364)),
             _txt = _nod.textContent;
 
-        console.log(_txt);
-
         //private methods
         var _onEvents = function() {
 
