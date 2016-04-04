@@ -1,0 +1,70 @@
+.to-send {
+  position: relative;
+  width: 100%;
+  min-height: 210px;
+  margin-top: 20px;
+  background-size: cover;
+  background-position: center;
+  @include main-font3();
+  color: #fff;
+  
+  &:before {
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    height: 1px;
+    background: #e1e2e3;
+    content: '';
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 28px;
+
+    strong {
+      @include main-font6();
+    }
+  }
+  &__form {
+
+    input {
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      font-size: 25px;
+      line-height: 30px;
+      color: #fff;
+
+      &::-webkit-input-placeholder {
+        color: #fff;
+      }
+      &:-moz-placeholder {
+        color: #fff;
+      }
+      &.placeholder {
+        color: #fff;
+      }
+
+    }
+    .btn {
+
+    }
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .to-send {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+}
+
+@media (min-width: $desktop) {
+  .to-send {
+
+  }
+}

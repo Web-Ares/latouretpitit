@@ -381,8 +381,8 @@
         var _self = this,
             _obj = obj,
             _window = $( window ),
-            _btn = _obj.find( 'dt'),
-            _tabsContent = _obj.find( 'dd'),
+            _btn = obj.find( 'dt'),
+            _tabsContent = obj.find( 'dd'),
             _flag = true;
 
         //private methods
@@ -435,7 +435,7 @@
 
             },
             _init = function() {
-                _obj[ 0 ].obj = _self;
+                obj[ 0 ].obj = self;
                 _onEvents();
             },
             _setTopPos = function() {

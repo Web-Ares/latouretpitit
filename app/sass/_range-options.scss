@@ -1,8 +1,11 @@
 .range-options {
 
   &__aside {
+    vertical-align: top;
+    display: inline-block;
     max-width: 457px;
     padding: 52px 0 0;
+    margin-right: 26px;
 
     &-wrap {
       position: relative;
@@ -15,6 +18,14 @@
         margin-bottom: 0;
       }
     }
+  }
+  &__content {
+    vertical-align: top;
+    display: inline-block;
+    width: 652px;
+    margin: 0;
+    padding: 52px 0 0;
+    @include justify();
   }
   &__form {
     padding: 0 0 140px 0;
@@ -227,6 +238,55 @@
         opacity: .8;
       }
     }
+  }
+
+  .possessions {
+        &__items {
+      width: 47.4%;
+    }
+    &__items-wrap {
+      padding-bottom: 0;
+      margin-bottom: 36px;
+    }
+    &__pic {
+      overflow: hidden;
+      position: relative;
+      height: 239px;
+    }
+    &__pic-text {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(199, 93, 93, .0);
+        @include transition(background, .3, 0)
+      }
+      &:hover {
+
+        &:after {
+          background: rgba(199, 93, 93, .6);
+        }
+      }
+      p {
+        font-size: 15px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+    }
+
+    .tags {
+      position: absolute;
+      bottom: 0;
+    }
+
   }
 }
 

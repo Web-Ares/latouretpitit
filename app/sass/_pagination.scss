@@ -1,0 +1,62 @@
+.pagination {
+  @include justify();
+
+  &__item {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    color: #b2b2b2;
+    @include main-font3();
+  }
+
+
+  &__prev,
+  &__next {
+    position: relative;
+    color: #c75d5d;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 8px;
+      background: url(../img/red-arrow.png) no-repeat;
+      background-size: contain;
+      content: '';
+    }
+  }
+
+  &__prev {
+    padding-left: 30px;
+  }
+  &__next {
+    padding-left: 0;
+    padding-right: 30px;
+
+    &:before {
+      right: 0;
+      left: auto;
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .pagination {
+
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+}
+
+@media (min-width: $desktop) {
+  .pagination {
+
+  }
+}

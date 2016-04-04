@@ -1,12 +1,14 @@
 .websters-select {
   overflow: hidden;
+  vertical-align: middle;
   display: inline-block;
-  vertical-align: top;
   box-sizing: border-box;
   position: relative;
-  width: 200px;
-  height: 22px;
-  border: 1px solid $websters-select-border;
+  width: 180px;
+  height: 40px;
+  border: 2px solid $websters-select-border;
+  background: $websters-select-back;
+  @include main-font3();
 
   &_opened {
 
@@ -30,22 +32,22 @@
     &:before {
       position: absolute;
       top: 9px;
-      width: 10px;
+      width: 6px;
       height: 2px;
       border-radius: 2px;
-      background: $websters-select-border;
+      background: $websters-select-item-color;
       content: '';
     }
 
     &:after {
       left: 4px;
-      transform: rotate(70deg);
+      transform: rotate(45deg);
 
     }
 
     &:before {
       right: 3px;
-      transform: rotate(-70deg);
+      transform: rotate(-45deg);
 
     }
   }
@@ -60,6 +62,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: left;
+    color: $websters-select-item-color;
   }
 
   &_mobile {
@@ -88,26 +91,29 @@
     position: absolute;
     z-index: 10;
     box-sizing: border-box;
-    border: 1px solid $websters-select-border;
-    background: $websters-select-popup-back;
+    border: 2px solid $websters-select-border;
+    background: $websters-select-back;
+    @include main-font3();
 
     ul {
       z-index: 1;
     }
 
     li {
+      padding: 3px 10px;
       white-space: nowrap;
       overflow: hidden;
       cursor: pointer;
+      color: $websters-select-item-color;
 
       &:hover {
-        color: $websters-select-popup-item-active-color;
-        background: $websters-select-popup-item-active-back;
+        //color: $websters-select-popup-item-active-color;
+        background: $websters-select-border;
       }
 
       &.active {
-        color: $websters-select-popup-item-active-color !important;
-        background: $websters-select-popup-item-active-back !important;
+        //color: $websters-select-popup-item-active-color !important;
+        background: $websters-select-border !important;
       }
 
     }
