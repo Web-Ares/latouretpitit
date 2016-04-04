@@ -37,8 +37,23 @@
 
 
   //fonts
-  &__myriadpro-regular {
-    @include main-font1
+  &__proximanova-regular {
+    @include main-font1();
+  }
+  &__proximanova-bold {
+    @include main-font2();
+  }
+  &__proximanova-semibold {
+    @include main-font3();
+  }
+  &__proximanova-light {
+    @include main-font4();
+  }
+  &__pt-serif-regular {
+    @include main-font5();
+  }
+  &__pt-serif-bold {
+    @include main-font6();
   }
 
 }
