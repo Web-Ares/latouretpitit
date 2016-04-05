@@ -28,6 +28,7 @@ var paths = {
             dist: 'list.min.js',
             contains: [
                 'app/js/jquery.index.js',
+                'app/js/jquery.filter-autocomplete.js',
                 'app/js/jquery.filter-map.js',
                 'app/js/jquery.main.js',
                 'app/js/jquery.budget-slider.js',
@@ -38,6 +39,8 @@ var paths = {
             dist: 'ui.min.js',
             contains: [
                 'app/js/jquery.popup.js',
+                'app/js/jquery.filter-map.js',
+                'app/js/jquery.budget-slider.js',
                 'app/js/jquery.websters-select.js'
             ]
         },

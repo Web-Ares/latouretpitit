@@ -97,6 +97,51 @@
     }
   }
 
+  .search-autocomplite__list {
+    display: none;
+  }
+
+}
+
+.search-autocomplite__list {
+  position: fixed;
+  z-index: 3;
+  display: block;
+  overflow: hidden;
+  max-height: 188px;
+  height: auto;
+  opacity: 1;
+  @include main-font3();
+  transition: opacity 300ms ease-in-out;
+  border: 2px solid #cdcdcd;
+  border-radius: 3px;
+  background: #fff;
+
+  &_hidden{
+    opacity: 0;
+    height: 0;
+  }
+
+  li {
+    height: 46px;
+    border-top: 2px solid #cdcdcd;
+    line-height: 46px;
+    padding: 0 20px;
+    transition: background 300ms ease-in-out;
+
+    &.hover {
+      background: #e8e9ea;
+    }
+
+    &.filtered {
+      display: none;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+
 }
 
 @media (min-width: $tablet-portrait) {
