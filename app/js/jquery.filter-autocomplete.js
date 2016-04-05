@@ -18,6 +18,7 @@
             _input = _obj.find( 'input' ),
             _inputWrap = _obj.find( '.search-autocomplite__inner' ),
             _window = $( window ),
+            _map = $( '.filter-map' ),
             _body = $( 'body' ),
             _resultList = _obj.find( '.search-autocomplite__result' ),
             _list,
@@ -175,6 +176,8 @@
                 _hoveredItem.addClass( 'hidden' );
 
                 _resultList.append( '<div>'+ _hoveredItem.text() +'<span class="search-autocomplite__result-close"></span></div>' );
+
+                _refreshMap();
             },
             _unselectItem = function( texts ) {
                 var curItem;
@@ -201,6 +204,18 @@
 
                 } );
 
+                _refreshMap();
+
+            },
+            _refreshMap = function(){
+                var items = [],
+                    selectedItems = _listItems.filter( '.hidden' );
+
+                selectedItems.each( function() {
+                    items.push( $( this ).text() );
+                } );
+
+                _map[ 0 ].obj.refresh( items );
             },
             _showList = function(){
                 _checkListPosition();
@@ -211,6 +226,28 @@
         //public properties
 
         //public methods
+        _self.refresh = function( items ) {
+            var currentItem;
+
+            _listItems.removeClass( 'hidden' );
+            _resultList.html( '' );
+
+            _listItems.each( function () {
+                currentItem = $( this );
+
+                $.each( items, function () {
+                    if( currentItem.text() == this ){
+                        currentItem.addClass( 'hidden' );
+                    }
+                } );
+
+            } );
+
+            $.each( items, function () {
+                _resultList.append( '<div>'+ this +'<span class="search-autocomplite__result-close"></span></div>' );
+            } );
+
+        };
 
 
         _init();
