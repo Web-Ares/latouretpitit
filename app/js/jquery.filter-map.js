@@ -23,12 +23,13 @@
         //private properties
         var _self = this,
             _obj = obj,
+            _form = _obj.parents('form'),
             _mapContainer = _obj.find( '.filter-map__layout' ),
             _mapData = _obj.data( 'map' ),
             _inputs = _obj.find( 'input' ),
             _areas = [],
             _map;
-    
+
         //private methods
         var _addAreas = function(){
                 var areas = _mapData.areas,
@@ -97,9 +98,7 @@
             _init = function(){
 
                 _obj[ 0 ].obj = _self;
-
-                console.log( 1 );
-
+                _onEvents();
                 google.maps.event.addDomListener(window, 'load', _initMap);
 
             },
@@ -112,6 +111,16 @@
                 _addAreas();
             },
             _onEvents = function(){
+
+                _form.on( {
+                    submit: function() {
+
+                        console.log('submit');
+
+                       return false
+
+                    }
+                } );
 
             };
     
