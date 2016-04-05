@@ -41,7 +41,9 @@
 
                 _listItems = _list.find( 'li' );
 
-                _body.append( _list )
+                _body.append( _list );
+                _list.niceScroll();
+
             },
             _filterItems = function() {
                 var currentListItem;
@@ -64,6 +66,13 @@
             _hover = function( item ){
                 _listItems.removeClass( 'hover' );
                 item.addClass( 'hover' );
+
+                if( item.position().top >= _list.height() ){
+                    _list.scrollTop(  item.position().top + _list.scrollTop() - ( item.outerHeight() * 3 ) );
+                } else if ( item.position().top < 0 ){
+                    _list.scrollTop(  item.position().top + _list.scrollTop() );
+
+                }
             },
             _hoverNext = function() {
                 var items,
@@ -75,6 +84,8 @@
                 currentItem = items.filter( '.hover' );
                 index = items.index( currentItem );
 
+                index = (index < 0)?0:index;
+
                 if( currentItem.length ){
 
                     if( index + 1 === items.length ){
@@ -84,7 +95,7 @@
                     }
 
                 } else {
-                    _hover( _listItems.eq( 0 ) );
+                    _hover( items.eq( 0 ) );
                 }
 
             },
@@ -131,9 +142,13 @@
                             _hoverPrev();
                         } else if ( e.keyCode == 13 ){
                             _selectItem();
+
                         } else {
                             _filterItems();
                         }
+                    },
+                    blur: function() {
+                        _hideList();
                     }
                 } );
                 _listItems.on( {
@@ -151,20 +166,18 @@
                     _unselectItem( [ $( this ).text() ] );
                 } );
 
-                _input.on( {
-                    blur: function() {
-                        _hideList();
-                    }
-                } );
-
                 _window.on( {
                     scroll: function() {
+
                         _hideList();
                     },
                     click: function() {
-                        _hideList();
+                        setTimeout( function () {
+                            _hideList();
+                        },150);
                     },
                     resize: function() {
+
                         _hideList();
                     }
                 } );

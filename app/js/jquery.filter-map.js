@@ -119,16 +119,16 @@
             _onEvents = function(){
 
                 _form.on( {
-                    submit: function() {
+                    submit: function(e) {
 
-                        console.log('submit');
+                        e.stopPropagation();
 
                         return false
 
                     }
                 } );
 
-            };
+            },
             _refreshAutocomplete = function(){
                 var items = [];
 
