@@ -155,14 +155,6 @@
   .content-menu {
     transition: opacity 300ms ease-in-out;
 
-    &_absolute {
-
-      .content-menu__layout {
-        position: absolute;
-      }
-
-    }
-
     &__btn {
       display: none;
     }
