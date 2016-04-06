@@ -1,4 +1,3 @@
-
 ( function(){
     'use strict';
 
@@ -22,7 +21,6 @@
         var _init = function(){
                 _obj[ 0 ].obj = _self;
                 _onEvents();
-                //_ajaxRequest();
             },
             _onEvents = function(){
 
@@ -37,7 +35,7 @@
                 _window.on( {
                     load: function() {
 
-                        //_ajaxRequest();
+                        _ajaxRequest();
 
                     }
                 } );
@@ -46,34 +44,21 @@
 
             _ajaxRequest = function(){
 
-                var path = _obj.data('action');
+                var path = _obj.data('action').toString();
 
                 console.log(path);
 
-                //_ajax.abort();
+                _ajax = $.getJSON(path, {
+                    format: "json"
+                })
 
-                _ajax = $.getJSON({
-                    url: path,
-                    //data: {
-                    //    //popupId: _obj.attr('data-popup-id')
-                    //},
-                    dataType: 'json',
-                    type: "GET",
-                    success: function (msg) {
+                .done(function( data ) {
 
-                        console.log(msg)
+                    console.log(data);
 
-                    },
-                    error: function (XMLHttpRequest) {
-                        if (XMLHttpRequest.statusText != "abort") {
-                            alert("ERROR!!!");
-                        }
-                    }
                 });
 
             };
-
-
 
         //public properties
 
